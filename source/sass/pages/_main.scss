@@ -1,0 +1,15 @@
+.fitness {
+  background: url("../img/mainBg.jpg") no-repeat 10%;
+  background-size: cover;
+  height: 658px;
+  padding: 51px 0;
+
+  @media screen and (max-width: 1365px) {
+    height: 554px;
+    padding: 82px 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    height: 491px;
+  }
+}

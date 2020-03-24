@@ -1,0 +1,58 @@
+.header {
+  left: 0;
+  top: 0;
+  padding-top: 30px;
+  position: absolute;
+  width: 100%;
+  font-size: 26px;
+
+  line-height: 1em;
+
+  @media screen and (max-width: 1365px) {
+    font-size: 24px;
+    padding-top: 40px;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 20px;
+    padding-top: 20px;
+  }
+}
+
+.header-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__phone {
+  color: white;
+  font-family: "BebasNeue";
+  letter-spacing: 0.04em;
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  @media screen and (max-width: 1365px) {
+    letter-spacing: 0.03em;
+  }
+
+  @media screen and (max-width: 767px) {
+    height: 15px;
+  }
+}
+
+.header__logo {
+  height: 20px;
+
+  @media screen and (max-width: 1365px) {
+    height: 19px;
+  }
+
+  @media screen and (max-width: 767px) {
+    height: 15px;
+  }
+}
