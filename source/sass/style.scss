@@ -1,1 +1,11 @@
+@import "base/typography";
 @import "base/normalize";
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+// подключил для тестирования
+h1 {
+  font-family: "BebasNeue", sans-serif;
+}
