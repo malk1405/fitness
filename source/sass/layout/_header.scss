@@ -1,12 +1,12 @@
 .header {
+  font-size: 26px;
   left: 0;
-  top: 0;
+  line-height: 1em;
   padding-top: 30px;
   position: absolute;
+  top: 0;
   width: 100%;
-  font-size: 26px;
-
-  line-height: 1em;
+  z-index: 10;
 
   @media screen and (max-width: 1365px) {
     font-size: 24px;
