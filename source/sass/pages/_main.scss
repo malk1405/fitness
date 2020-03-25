@@ -158,3 +158,118 @@
     display: none;
   }
 }
+
+.gym > .container {
+  @media screen and (max-width: 767px) {
+    padding: 0;
+  }
+}
+
+.gym-wrapper {
+  display: flex;
+  padding: 120px 0;
+
+  @media screen and (max-width: 1365px) {
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 70px 0;
+  }
+}
+
+.gym__info {
+  color: #102654;
+  line-height: 1.5;
+  margin: 47px 85px 0 auto;
+  max-width: 355px;
+
+  @media screen and (max-width: 1365px) {
+    margin: 0;
+    min-width: 502px;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin: 0;
+    min-width: 290px;
+    max-width: 290px;
+    text-align: left;
+  }
+}
+
+.gym__square {
+  font-size: 18px;
+  margin-top: 8px;
+
+  @media screen and (max-width: 767px) {
+    margin-top: 5px;
+  }
+}
+
+.gym__description {
+  margin-bottom: 42px;
+  margin-top: 40px;
+  font-size: 16px;
+  font-weight: 300;
+
+  & p:not(:first-child) {
+    margin-top: 7px;
+  }
+
+  @media screen and (max-width: 1365px) {
+    margin-top: 35px;
+
+    & p:not(:first-child) {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 32px;
+    margin-top: 25px;
+    width: 258px;
+  }
+}
+
+.gym__photo {
+  height: 401px;
+  width: 660px;
+
+  @media screen and (max-width: 1365px) {
+    height: 376px;
+    width: 678px;
+  }
+
+  @media screen and (max-width: 767px) {
+    height: 313px;
+    width: 320px;
+  }
+}
+
+.gym__video {
+  height: 228px;
+  margin-left: -63px;
+  margin-top: -113px;
+  width: 364px;
+
+  @media screen and (max-width: 1365px) {
+    height: 167px;
+    margin: -115px auto 0;
+    width: 266px;
+  }
+
+  @media screen and (max-width: 767px) {
+    height: 167px;
+    margin: 40px 0;
+    width: 320px;
+  }
+
+  & video {
+    min-width: 100%;
+    max-width: 100%;
+    height: 100%;
+  }
+}
