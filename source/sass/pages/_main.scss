@@ -4,7 +4,6 @@
   color: white;
   height: 658px;
   padding: 51px 0;
-  position: relative;
 
   @media screen and (max-width: 1365px) {
     height: 554px;
@@ -19,16 +18,7 @@
 .fitness-wrapper {
   display: flex;
   justify-content: flex-end;
-  margin: 0 auto;
-  width: 1160px;
-
-  @media screen and (max-width: 1365px) {
-    width: 678px;
-  }
-
-  @media screen and (max-width: 767px) {
-    width: 290px;
-  }
+  position: relative;
 }
 
 .fitness__info {
@@ -155,10 +145,10 @@
 }
 
 .fitness__social {
-  bottom: 93px;
+  bottom: 42px;
   font-size: 12px;
   position: absolute;
-  right: 103px;
+  right: 0;
   text-align: end;
   & li {
     margin-top: 20px;
