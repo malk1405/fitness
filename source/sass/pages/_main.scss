@@ -1,6 +1,5 @@
 .fitness {
   background: url("../img/mainBg.jpg") no-repeat 10%;
-
   background-size: cover;
   color: white;
   height: 658px;
@@ -66,29 +65,27 @@
 
 .fitness__title {
   font-family: "BebasNeue";
-  font-size: 110px;
+  font-size: 112px;
   font-weight: bold;
-  letter-spacing: 0.03em;
-  line-height: 1em;
-  margin-top: 4px;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  margin-top: 7px;
   text-transform: uppercase;
 
   @media screen and (max-width: 1365px) {
-    font-size: 86px;
-    // letter-spacing: 3px;
-    margin: 0;
+    font-size: 88px;
+    margin-top: 1px;
   }
 
   @media screen and (max-width: 767px) {
-    font-size: 78px;
-    // letter-spacing: 3px;
-    margin-top: 4px;
+    font-size: 81px;
+    margin-top: 6px;
   }
 }
 
 .fitness__activities {
   font-size: 14px;
-  line-height: 1.5em;
+  line-height: 1.5;
   position: absolute;
   right: 264px;
   top: 305px;
@@ -113,18 +110,18 @@
   font-weight: bold;
   letter-spacing: 0.5px;
   line-height: 53px;
-  margin-top: 60px;
+  margin-top: 52px;
   text-align: center;
   text-transform: uppercase;
   width: 232px;
 
   @media screen and (max-width: 1365px) {
-    margin-top: 43px;
+    margin-top: 39px;
     width: 185px;
   }
 
   @media screen and (max-width: 767px) {
-    margin-top: 48px;
+    margin-top: 40px;
     width: 100%;
   }
 }
