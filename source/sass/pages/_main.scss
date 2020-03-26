@@ -275,16 +275,29 @@
 
 .abonement {
   background-color: #f8f9fc;
-  background-repeat: no-repeat;
-  & > .container {
-    background-image: url("../img/abonementsBg-lg.png");
+
+  position: relative;
+
+  &::after {
+    background: url("../img/abonements-disks-lg.png");
+    bottom: -150px;
+    content: "";
+    display: block;
+    height: 494px;
+    position: absolute;
+    right: 0;
+    width: 287px;
 
     @media screen and (max-width: 1365px) {
-      background-image: url("../img/abonementsBg-md.png");
+      background: url("../img/abonements-disks-md.png");
+      bottom: -125px;
+      height: 444px;
+      width: 347px;
     }
 
     @media screen and (max-width: 767px) {
-      background-image: url("../img/abonementsBg-sm.png");
+      background: none;
+      display: none;
     }
   }
 }
@@ -294,7 +307,9 @@
   display: flex;
   flex-direction: column;
   padding: 120px 0;
+  position: relative;
   width: 100%;
+  z-index: 1;
 
   @media screen and (max-width: 1365px) {
     padding: 100px 0;
@@ -370,24 +385,23 @@
 .abonement__plans {
   display: flex;
   justify-content: space-between;
-  margin-top: 39px;
+  margin-top: 38px;
   width: 100%;
 
   @media screen and (max-width: 1365px) {
     flex-direction: column;
-    margin-top: 45px;
+    margin-top: 44px;
     width: 442px;
   }
 
   @media screen and (max-width: 767px) {
-    margin-top: 35px;
+    margin-top: 34px;
     width: 100%;
   }
 }
 
 .abonement__plan {
-  background-color: #92140fc5;
-  background-color: transparent;
+  background-color: white;
   height: 448px;
   padding: 7px;
   text-align: center;
