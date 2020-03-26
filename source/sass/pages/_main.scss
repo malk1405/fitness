@@ -181,7 +181,6 @@
 }
 
 .gym__info {
-  color: #102654;
   line-height: 1.5;
   margin: 47px 85px 0 auto;
   max-width: 355px;
@@ -276,6 +275,18 @@
 
 .abonement {
   background-color: #f8f9fc;
+  background-repeat: no-repeat;
+  & > .container {
+    background-image: url("../img/abonementsBg-lg.png");
+
+    @media screen and (max-width: 1365px) {
+      background-image: url("../img/abonementsBg-md.png");
+    }
+
+    @media screen and (max-width: 767px) {
+      background-image: url("../img/abonementsBg-sm.png");
+    }
+  }
 }
 
 .abonement-wrapper {
@@ -326,6 +337,7 @@
 
   & > label {
     position: relative;
+    padding-right: 2px;
 
     &::after {
       background-color: #d10a42;
@@ -346,7 +358,7 @@
     display: none;
 
     &:checked + label {
-      color: #102654;
+      color: $primary;
 
       &::after {
         display: block;
@@ -374,10 +386,16 @@
 }
 
 .abonement__plan {
-  background-color: white;
+  background-color: #92140fc5;
+  background-color: transparent;
   height: 448px;
+  padding: 7px;
   text-align: center;
   width: 360px;
+
+  &:hover {
+    background: linear-gradient(135deg, #ed0233 17.6%, #003eb7 95.31%);
+  }
 
   @media screen and (max-width: 1365px) {
     width: 100%;
@@ -393,5 +411,99 @@
     & + & {
       margin-top: 35px;
     }
+  }
+}
+
+.plan-wrapper {
+  background-color: white;
+  padding: 61px 69px;
+
+  @media screen and (max-width: 1365px) {
+    padding-left: 111px;
+    padding-right: 111px;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 48px 35px;
+  }
+}
+
+.plan__title {
+  font-size: 26px;
+  margin-top: -7px;
+
+  @media screen and (max-width: 767px) {
+    font-size: 22px;
+  }
+}
+
+.plan__time {
+  font-size: 16px;
+  margin-top: 13px;
+}
+
+.plan__price {
+  font-size: 60px;
+  margin-top: 79px;
+  position: relative;
+
+  &::before {
+    bottom: 0px;
+    content: attr(data-value);
+    color: #e8e8e8;
+    display: block;
+    font-size: 100px;
+    font-weight: bold;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+  }
+
+  & > span {
+    position: relative;
+    z-index: 2;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 48px;
+    margin-top: 66px;
+    & > span {
+      padding-left: 7px;
+    }
+
+    &::before {
+      font-size: 80px;
+    }
+  }
+}
+
+.plan__price--value {
+  font-weight: bold;
+}
+
+.plan__buy {
+  background-clip: border-box;
+  border: $primary 2px solid;
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  line-height: 61px;
+  margin-top: 45px;
+  text-transform: uppercase;
+  width: 100%;
+
+  &:hover {
+    background: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
+    background-position: cover;
+    background-repeat: no-repeat;
+    // background-clip: border-box;
+    border-color: transparent;
+    color: white;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-top: 38px;
   }
 }
