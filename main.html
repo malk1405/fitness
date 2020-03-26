@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Фитнес центр</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <script src="js/script.js"></script>
   </head>
   <body>
     <header class="header">
@@ -89,15 +90,15 @@
           <h2 class="section-header">Абонементы</h2>
           <ul class="abonement__months">
             <li class="abonement__month">
-              <input type="radio" id="month1" name="months" checked="">
+              <input type="radio" id="month1" name="months" value="0" checked="">
               <label for="month1">1 месяц</label>
             </li>
             <li class="abonement__month">
-              <input type="radio" id="month2" name="months">
+              <input type="radio" id="month2" name="months" value="1">
               <label for="month2">6 месяцев</label>
             </li>
             <li class="abonement__month">
-              <input type="radio" id="month3" name="months">
+              <input type="radio" id="month3" name="months" value="2">
               <label for="month3">12 месяцев</label>
             </li>
           </ul>
@@ -108,7 +109,7 @@
                 <p class="plan__time">12 занятий</p>
                 <p class="plan__price" data-value="5000">
                   <span>
-                    <span class="plan__price--value" data-value="5000">
+                    <span class="plan__price--value">
                       5000
                     </span>
                     &#8381;
@@ -123,7 +124,7 @@
                 <p class="plan__time">с 8:00 до 17:00</p>
                 <p class="plan__price" data-value="1700">
                   <span>
-                    <span class="plan__price--value" data-value="5000">
+                    <span class="plan__price--value">
                       1700
                     </span>
                     &#8381;
@@ -138,8 +139,102 @@
                 <p class="plan__time">с 8:00 до 22:00</p>
                 <p class="plan__price" data-value="2700">
                   <span>
-                    <span class="plan__price--value" data-value="5000">
+                    <span class="plan__price--value">
                       2700
+                    </span>
+                    &#8381;
+                  </span>
+                </p>
+                <a href="" class="plan__buy">Купить абонемент</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="abonement__plans visually-hidden">
+            <li class="abonement__plan">
+              <div class="plan-wrapper">
+                <h3 class="plan__title">С тренером</h3>
+                <p class="plan__time">12 занятий</p>
+                <p class="plan__price" data-value="25000">
+                  <span>
+                    <span class="plan__price--value">
+                      25000
+                    </span>
+                    &#8381;
+                  </span>
+                </p>
+                <a href="" class="plan__buy">Купить абонемент</a>
+              </div>
+            </li>
+            <li class="abonement__plan">
+              <div class="plan-wrapper">
+                <h3 class="plan__title">Дневной</h3>
+                <p class="plan__time">с 8:00 до 17:00</p>
+                <p class="plan__price" data-value="9000">
+                  <span>
+                    <span class="plan__price--value">
+                      9000
+                    </span>
+                    &#8381;
+                  </span>
+                </p>
+                <a href="" class="plan__buy">Купить абонемент</a>
+              </div>
+            </li>
+            <li class="abonement__plan">
+              <div class="plan-wrapper">
+                <h3 class="plan__title">Полный день</h3>
+                <p class="plan__time">с 8:00 до 22:00</p>
+                <p class="plan__price" data-value="15000">
+                  <span>
+                    <span class="plan__price--value">
+                      15000
+                    </span>
+                    &#8381;
+                  </span>
+                </p>
+                <a href="" class="plan__buy">Купить абонемент</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="abonement__plans visually-hidden">
+            <li class="abonement__plan">
+              <div class="plan-wrapper">
+                <h3 class="plan__title">С тренером</h3>
+                <p class="plan__time">12 занятий</p>
+                <p class="plan__price" data-value="45000">
+                  <span>
+                    <span class="plan__price--value">
+                      45000
+                    </span>
+                    &#8381;
+                  </span>
+                </p>
+                <a href="" class="plan__buy">Купить абонемент</a>
+              </div>
+            </li>
+            <li class="abonement__plan">
+              <div class="plan-wrapper">
+                <h3 class="plan__title">Дневной</h3>
+                <p class="plan__time">с 8:00 до 17:00</p>
+                <p class="plan__price" data-value="17000">
+                  <span>
+                    <span class="plan__price--value">
+                      17000
+                    </span>
+                    &#8381;
+                  </span>
+                </p>
+                <a href="" class="plan__buy">Купить абонемент</a>
+              </div>
+            </li>
+            <li class="abonement__plan">
+              <div class="plan-wrapper">
+                <h3 class="plan__title">Полный день</h3>
+                <p class="plan__time">с 8:00 до 22:00</p>
+                <p class="plan__price" data-value="25000">
+                  <span>
+                    <span class="plan__price--value">
+                      25000
                     </span>
                     &#8381;
                   </span>
