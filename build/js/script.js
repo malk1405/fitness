@@ -1,15 +1,23 @@
 'use strict';
-var pageHeader = document.querySelector('.page-header');
-var headerToggle = document.querySelector('.page-header__toggle');
 
-pageHeader.classList.remove('page-header--nojs');
+function activateTabs() {
+  var tabs = document.querySelector('.abonement__months');
+  var plans = document.querySelectorAll('.abonement__plans');
 
-headerToggle.addEventListener('click', function () {
-  if (pageHeader.classList.contains('page-header--closed')) {
-    pageHeader.classList.remove('page-header--closed');
-    pageHeader.classList.add('page-header--opened');
-  } else {
-    pageHeader.classList.add('page-header--closed');
-    pageHeader.classList.remove('page-header--opened');
-  }
-});
+  tabs.addEventListener('change', function(e) {
+    var id = event.target.value;
+    if (!plans[id]) return;
+
+    plans.forEach(function(plan) {
+      plan.classList.add('visually-hidden');
+    });
+
+    plans[id].classList.remove('visually-hidden');
+  });
+}
+
+function app() {
+  activateTabs();
+}
+
+window.addEventListener('DOMContentLoaded', app);
