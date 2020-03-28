@@ -847,6 +847,24 @@
       margin-right: 20px;
       width: 226px;
     }
+
+    &--hidden {
+      &-lg {
+        margin-left: -300px;
+      }
+
+      &-md {
+        @media screen and (max-width: 1365px) {
+          margin-left: -298px;
+        }
+      }
+
+      &-sm {
+        @media screen and (max-width: 767px) {
+          margin-left: -246px;
+        }
+      }
+    }
   }
 }
 // секция тренеры. Конец
