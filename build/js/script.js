@@ -3587,7 +3587,7 @@ __webpack_require__.r(__webpack_exports__);
 // реализовал, из-за того что полифил для IE
 // видимо не поддерживает параметр force
 var setClass = function setClass(node, className, set) {
-  if (set) node.classList.add(className);else node.classList.remove(className);
+  node.classList[set ? 'add' : 'remove'](className);
 };
 
 /***/ })
