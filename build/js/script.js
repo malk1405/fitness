@@ -1,79 +1,105 @@
-'use strict';
-// Источник: https://gist.github.com/k-gun/c2ea7c49edf7b757fe9561ba37cb19ca
-(function() {
-  // helpers
-  var regExp = function(name) {
-    return new RegExp('(^| )' + name + '( |$)');
-  };
-  var forEach = function(list, fn, scope) {
-    for (var i = 0; i < list.length; i++) {
-      fn.call(scope, list[i]);
-    }
-  };
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./source/js/app.js");
+/******/ })
+/************************************************************************/
+/******/ ({
 
-  // class list object with basic methods
-  function ClassList(element) {
-    this.element = element;
-  }
+/***/ "./source/js/app.js":
+/*!**************************!*\
+  !*** ./source/js/app.js ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-  ClassList.prototype = {
-    add: function() {
-      forEach(
-        arguments,
-        function(name) {
-          if (!this.contains(name)) {
-            this.element.className += ' ' + name;
-          }
-        },
-        this
-      );
-    },
-    remove: function() {
-      forEach(
-        arguments,
-        function(name) {
-          this.element.className = this.element.className.replace(
-            regExp(name),
-            ''
-          );
-        },
-        this
-      );
-    },
-    toggle: function(name) {
-      return this.contains(name)
-        ? (this.remove(name), false)
-        : (this.add(name), true);
-    },
-    contains: function(name) {
-      return regExp(name).test(this.element.className);
-    },
-    // bonus..
-    replace: function(oldName, newName) {
-      this.remove(oldName), this.add(newName);
-    }
-  };
+"use strict";
 
-  // IE8/9, Safari
-  if (!('classList' in Element.prototype)) {
-    Object.defineProperty(Element.prototype, 'classList', {
-      get: function() {
-        return new ClassList(this);
-      }
-    });
-  }
-
-  // replace() support for others
-  if (window.DOMTokenList && DOMTokenList.prototype.replace == null) {
-    DOMTokenList.prototype.replace = ClassList.prototype.replace;
-  }
-})();
 
 function activateTabs() {
   var tabs = document.querySelector('.abonement__months');
   var plans = document.querySelectorAll('.abonement__plans');
-
-  tabs.addEventListener('change', function(e) {
+  tabs.addEventListener('change', function (e) {
     var id = +event.target.value;
     if (!plans[id]) return;
 
@@ -89,12 +115,21 @@ function activateTabs() {
 
 function activateSlider() {
   var WINDOW_SIZE = {
-    lg: { maxWidth: Infinity, num: 4 },
-    md: { maxWidth: 1365, num: 2 },
-    sm: { maxWidth: 767, num: 1 }
+    lg: {
+      maxWidth: Infinity,
+      num: 4
+    },
+    md: {
+      maxWidth: 1365,
+      num: 2
+    },
+    sm: {
+      maxWidth: 767,
+      num: 1
+    }
   };
-
   var index = 0;
+
   function findMin(index, size) {
     return Math.floor(index / size) * size;
   }
@@ -104,9 +139,9 @@ function activateSlider() {
   function display(prefix) {
     var className = 'trainers__card--hidden-' + prefix;
     var min = findMin(index, WINDOW_SIZE[prefix].num);
+
     for (var i = 0; i < cards.length; i++) {
-      if (i < min) cards[i].classList.add(className);
-      else cards[i].classList.remove(className);
+      if (i < min) cards[i].classList.add(className);else cards[i].classList.remove(className);
     }
   }
 
@@ -117,7 +152,6 @@ function activateSlider() {
   }
 
   displayAll();
-
   var prevBtn = document.querySelector('.trainers__prev');
   var nextBtn = document.querySelector('.trainers__next');
 
@@ -127,21 +161,16 @@ function activateSlider() {
     return WINDOW_SIZE.lg.num;
   }
 
-  prevBtn.addEventListener('click', function() {
+  prevBtn.addEventListener('click', function () {
     var newIndex = index - getWindowSize();
-
     if (newIndex < 0) return;
-
     index = newIndex;
     displayAll();
   });
-
-  nextBtn.addEventListener('click', function() {
+  nextBtn.addEventListener('click', function () {
     var size = getWindowSize();
     var newIndex = findMin(index + size, size);
-
     if (newIndex >= cards.length) return;
-
     index = newIndex;
     displayAll();
   });
@@ -153,10 +182,7 @@ function app() {
 }
 
 function docReady(fn) {
-  if (
-    document.readyState === 'complete' ||
-    document.readyState === 'interactive'
-  ) {
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
     // call on next available tick
     setTimeout(fn, 1);
   } else {
@@ -165,3 +191,8 @@ function docReady(fn) {
 }
 
 docReady(app);
+
+/***/ })
+
+/******/ });
+//# sourceMappingURL=script.js.map

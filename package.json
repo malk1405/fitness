@@ -3,9 +3,15 @@
   "version": "1.0.0",
   "description": "Стартовый шаблон сборки Лиги А",
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
+    "babel-loader": "^8.1.0",
     "browser-sync": "2.26.x",
+    "core-js": "^3.6.4",
+    "eslint": "4.16.0",
+    "eslint-config-htmlacademy": "0.4.x",
     "gulp": "4.0.x",
     "gulp-csso": "^3.0.1",
     "gulp-imagemin": "^5.0.3",
@@ -21,8 +27,8 @@
     "posthtml-include": "^1.2.0",
     "stylelint": "9.10.x",
     "stylelint-config-htmlacademy": "0.1.x",
-    "eslint": "4.16.0",
-    "eslint-config-htmlacademy": "0.4.x"
+    "webpack": "^4.42.1",
+    "webpack-stream": "^5.2.1"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
