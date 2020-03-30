@@ -1151,3 +1151,193 @@
     }
   }
 }
+
+.sales {
+  &__header {
+    text-align: center;
+  }
+
+  &__container {
+    display: flex;
+    margin-top: 50px;
+    width: 100%;
+
+    @media screen and (max-width: 1365px) {
+      display: block;
+      margin-top: 40px;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin-top: 42px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    width: 560px;
+
+    @media screen and (max-width: 1365px) {
+      flex-direction: row;
+      margin-top: 30px;
+      width: 100%;
+    }
+
+    @media screen and (max-width: 767px) {
+      display: block;
+      width: 100%;
+    }
+
+    &--main {
+      flex-direction: row;
+      height: 462px;
+      margin: 0;
+      margin-right: auto;
+
+      @media screen and (max-width: 767px) {
+        flex-direction: column;
+        height: 598px;
+      }
+
+      &::after {
+        background: url("../img/sales-lg.jpg");
+        content: "";
+        display: block;
+        flex-grow: 1;
+
+        @media screen and (max-width: 1365px) {
+          background: url("../img/sales-md.jpg");
+        }
+
+        @media screen and (max-width: 767px) {
+          background: url("../img/sales-sm.jpg");
+          height: 50%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.sale {
+  align-items: flex-start;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 26px 28px;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 35px;
+    padding-bottom: 37px;
+  }
+
+  & * {
+    // Для IE 11
+    max-width: 100%;
+  }
+
+  &-wrapper {
+    background: linear-gradient(135deg, #ed0233 17.6%, #003eb7 95.31%);
+    height: 211px;
+    padding: 7px;
+
+    @media screen and (max-width: 1365px) {
+      width: 324px;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
+
+    & + & {
+      margin-top: auto;
+
+      @media screen and (max-width: 1365px) {
+        margin: 0;
+        margin-left: auto;
+      }
+
+      @media screen and (max-width: 767px) {
+        margin: 0;
+        margin-top: 30px;
+        width: 100%;
+      }
+    }
+  }
+
+  &#{&}--main {
+    background-color: #ed0233;
+    color: white;
+    padding: 41px 45px;
+    width: 280px;
+
+    @media screen and (max-width: 767px) {
+      height: 50%;
+    }
+  }
+
+  &#{&} {
+    @media screen and (max-width: 767px) {
+      align-items: center;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 10px;
+
+    &--main {
+      font-size: 28px;
+    }
+  }
+
+  &__price {
+    font-size: 70px;
+    font-weight: bold;
+    margin-top: -12px;
+  }
+
+  &__description {
+    line-height: 1.4;
+
+    &--main {
+      font-size: 18px;
+      margin-top: 14px;
+
+      @media screen and (max-width: 767px) {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &__info {
+    border-bottom: 1px solid $primary;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    margin: auto 0 2px;
+    text-transform: uppercase;
+    position: relative;
+
+    &:hover {
+      transform: translateX(20px) scale(1.5);
+
+      @media screen and (max-width: 767px) {
+        transform: scale(1.5);
+      }
+    }
+
+    &--main {
+      border-color: white;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+  }
+}
