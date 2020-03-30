@@ -926,3 +926,171 @@
   }
 }
 // секция тренеры. Конец
+
+.advantages {
+  background-color: #f8f9fc;
+
+  // Начало
+  margin-bottom: 30px;
+  background-color: #d10a421c;
+  position: relative;
+  &-bg {
+    background-image: url("../img/advantagesBg-lg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 664px;
+    left: 0;
+    margin-bottom: 40px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+
+    @media screen and (max-width: 1365px) {
+      background-image: url("../img/advantagesBg-md.png");
+      height: 755px;
+    }
+
+    @media screen and (max-width: 767px) {
+      background-image: url("../img/advantagesBg-sm.png");
+      height: 453px;
+    }
+  }
+  // Конец
+
+  padding: 120px 0;
+  text-align: center;
+
+  &-features {
+    background-color: #d10a421c;
+    display: flex;
+    flex-direction: column;
+    height: 307px;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 68px;
+    position: relative;
+    width: 1040px;
+
+    &::before,
+    &::after {
+      background-color: rgba(209, 10, 66, 0.2);
+      content: "";
+      display: block;
+      height: 2px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 340px;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      margin: -11px 0 -3px;
+
+      @media screen and (max-width: 1365px) {
+        &::before {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        background-image: url("../img/advantagesBg-sm.png");
+        height: 453px;
+      }
+    }
+  }
+
+  &-feature {
+    background-color: #d10a421c;
+    display: flex;
+    text-align: left;
+    width: 340px;
+
+    &--main {
+      background-color: #1c3374;
+      background-color: #d10a421c;
+      color: white;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-between;
+      left: 50%;
+      max-width: 240px;
+      min-width: 240px;
+      padding: 59px 34px;
+      position: absolute;
+      text-align: center;
+      transform: translateX(-50%);
+      top: 0;
+    }
+
+    &--right {
+      padding-left: 20px;
+    }
+
+    &__info {
+      display: flex;
+      line-height: 1.5;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin-bottom: -2px;
+      margin-left: 29px;
+      order: 1;
+
+      &--main {
+        margin: 0;
+      }
+    }
+
+    &__title {
+      font-size: 22px;
+      margin-bottom: 6px;
+    }
+
+    &__description {
+      font-weight: 300;
+      line-height: 1.4;
+
+      &--main {
+        line-height: 1.5;
+      }
+    }
+
+    &__number {
+      font-size: 71px;
+      font-weight: bold;
+      line-height: 1;
+
+      &:not(&--main) {
+        background: -webkit-linear-gradient(#d10a42, #0041ca);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      &--main {
+        font-size: 74px;
+        line-height: 66px;
+      }
+    }
+
+    &__unit {
+      font-size: 14px;
+      line-height: 1;
+
+      &--main {
+        font-size: 26px;
+        font-weight: bold;
+        margin-top: 11px;
+      }
+    }
+  }
+}
