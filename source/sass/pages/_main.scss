@@ -929,40 +929,18 @@
 
 .advantages {
   background-color: #f8f9fc;
-
-  // Начало
-  margin-bottom: 30px;
-  background-color: #d10a421c;
-  position: relative;
-  &-bg {
-    background-image: url("../img/advantagesBg-lg.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 664px;
-    left: 0;
-    margin-bottom: 40px;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -1;
-
-    @media screen and (max-width: 1365px) {
-      background-image: url("../img/advantagesBg-md.png");
-      height: 755px;
-    }
-
-    @media screen and (max-width: 767px) {
-      background-image: url("../img/advantagesBg-sm.png");
-      height: 453px;
-    }
-  }
-  // Конец
-
   padding: 120px 0;
   text-align: center;
 
+  @media screen and (max-width: 1365px) {
+    padding: 100px 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 70px 0;
+  }
+
   &-features {
-    background-color: #d10a421c;
     display: flex;
     flex-direction: column;
     height: 307px;
@@ -992,49 +970,94 @@
       right: 0;
     }
 
+    @media screen and (max-width: 1365px) {
+      height: auto;
+      margin-top: 42px;
+      width: 768px;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
+
     &__container {
       display: flex;
       justify-content: space-between;
       margin: -11px 0 -3px;
 
       @media screen and (max-width: 1365px) {
-        &::before {
-          display: none;
-        }
+        margin: 0;
+        padding: 0 45px;
       }
 
       @media screen and (max-width: 767px) {
-        background-image: url("../img/advantagesBg-sm.png");
-        height: 453px;
+        align-items: center;
+        flex-direction: column;
       }
     }
   }
 
   &-feature {
-    background-color: #d10a421c;
     display: flex;
     text-align: left;
     width: 340px;
 
+    @media screen and (max-width: 1365px) {
+      width: 48%;
+    }
+
+    @media screen and (max-width: 767px) {
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      width: 227px;
+    }
+
     &--main {
       background-color: #1c3374;
-      background-color: #d10a421c;
       color: white;
       flex-direction: column;
       height: 100%;
       justify-content: space-between;
-      left: 50%;
-      max-width: 240px;
-      min-width: 240px;
       padding: 59px 34px;
       position: absolute;
       text-align: center;
       transform: translateX(-50%);
       top: 0;
+      left: 50%;
+      width: 240px;
+
+      @media screen and (max-width: 1365px) {
+        height: 239px;
+        margin: 44px auto;
+        padding: 38px 130px;
+        position: static;
+        transform: none;
+        width: 442px;
+      }
+
+      @media screen and (max-width: 767px) {
+        margin-bottom: 40px;
+        padding: 42px 130px;
+        width: 100%;
+      }
     }
 
-    &--right {
+    &--left {
       padding-left: 20px;
+
+      @media screen and (max-width: 1365px) {
+        padding-left: 0;
+      }
+
+      @media screen and (max-width: 767px) {
+        margin-bottom: 32px;
+      }
     }
 
     &__info {
@@ -1046,14 +1069,25 @@
       margin-left: 29px;
       order: 1;
 
+      @media screen and (max-width: 767px) {
+        margin: 0;
+        margin-top: 10px;
+      }
+
       &--main {
         margin: 0;
+        width: 180px;
       }
     }
 
     &__title {
       font-size: 22px;
       margin-bottom: 6px;
+
+      @media screen and (max-width: 1365px) {
+        font-size: 20px;
+        margin-bottom: 3px;
+      }
     }
 
     &__description {
@@ -1076,6 +1110,10 @@
         -webkit-text-fill-color: transparent;
       }
 
+      @media screen and (max-width: 1365px) {
+        font-size: 58px;
+      }
+
       &--main {
         font-size: 74px;
         line-height: 66px;
@@ -1090,6 +1128,14 @@
         font-size: 26px;
         font-weight: bold;
         margin-top: 11px;
+
+        @media screen and (max-width: 1365px) {
+          font-size: 22px;
+        }
+
+        @media screen and (max-width: 1365px) {
+          margin-top: 5px;
+        }
       }
     }
   }
