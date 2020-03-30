@@ -989,10 +989,17 @@
       display: flex;
       justify-content: space-between;
       margin: -11px 0 -3px;
+      position: absolute;
+      width: 100%;
+
+      &:last-child {
+        bottom: 0;
+      }
 
       @media screen and (max-width: 1365px) {
         margin: 0;
         padding: 0 45px;
+        position: static;
       }
 
       @media screen and (max-width: 767px) {
@@ -1061,17 +1068,21 @@
     }
 
     &__info {
-      display: flex;
       line-height: 1.5;
-      flex-direction: column;
-      justify-content: flex-end;
       margin-bottom: -2px;
       margin-left: 29px;
       order: 1;
+      position: relative;
+      top: 4px;
+
+      @media screen and (max-width: 1365px) {
+        top: 0;
+      }
 
       @media screen and (max-width: 767px) {
         margin: 0;
         margin-top: 10px;
+        width: 100%;
       }
 
       &--main {
