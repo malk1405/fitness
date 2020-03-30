@@ -37,7 +37,8 @@
     "build": "gulp build",
     "start": "gulp start",
     "webp": "gulp webp",
-    "sprite": "gulp sprite"
+    "sprite": "gulp sprite",
+    "deploy": "git push origin master && git subtree --prefix build push origin gh-pages"
   },
   "browserslist": [
     "last 2 versions",
