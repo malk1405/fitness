@@ -3453,8 +3453,12 @@ function app() {
     md: 2,
     sm: 1
   });
+  var reviewsSlider = Object(_slider__WEBPACK_IMPORTED_MODULE_0__["default"])('reviews', {
+    lg: 1
+  });
   Object(_tabs__WEBPACK_IMPORTED_MODULE_1__["default"])();
   trainersSlider.activate();
+  reviewsSlider.activate();
 }
 
 function docReady(fn) {
