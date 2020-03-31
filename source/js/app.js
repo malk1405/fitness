@@ -1,11 +1,13 @@
 'use strict';
 
-import activateSlider from './slider';
+import createSlider from './slider';
 import activateTabs from './tabs';
 
 function app() {
+  const trainersSlider = createSlider('trainers', { lg: 4, md: 2, sm: 1 });
+
   activateTabs();
-  activateSlider();
+  trainersSlider.activate();
 }
 
 function docReady(fn) {
@@ -13,7 +15,6 @@ function docReady(fn) {
     document.readyState === 'complete' ||
     document.readyState === 'interactive'
   ) {
-    // call on next available tick
     setTimeout(fn, 1);
   } else {
     document.addEventListener('DOMContentLoaded', fn);
