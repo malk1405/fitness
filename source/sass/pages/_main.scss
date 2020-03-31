@@ -1117,7 +1117,7 @@
 
       &:not(&--main) {
         background: -webkit-linear-gradient(#d10a42, #0041ca);
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
       }
 
