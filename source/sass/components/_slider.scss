@@ -10,12 +10,12 @@
       border: none;
       cursor: pointer;
       height: 34px;
+      min-width: 18px;
       padding: 0;
       position: absolute;
       outline: none;
       transform: translateY(-50%);
       top: 50%;
-      min-width: 18px;
 
       @media screen and (max-width: 1365px) {
         position: relative;

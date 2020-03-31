@@ -827,6 +827,7 @@
 }
 // секция тренеры. Конец
 
+// секция преимущества
 .advantages {
   background-color: #f8f9fc;
   padding: 120px 0;
@@ -1051,7 +1052,9 @@
     }
   }
 }
+// секция преимущества. Конец
 
+// секция акции
 .sales {
   &__header {
     text-align: center;
@@ -1241,3 +1244,85 @@
     }
   }
 }
+// секция акции. Конец
+
+// секция отзывы
+.reviews {
+  &__header {
+    text-align: center;
+  }
+
+  &__slider {
+    height: 242px;
+    margin: 50px auto 0;
+    width: 560px;
+
+    @media screen and (max-width: 1365px) {
+      margin-top: 40px;
+      width: 100%;
+    }
+
+    @media screen and (max-width: 767px) {
+      height: 335px;
+      margin-top: 42px;
+    }
+  }
+
+  &__card {
+    background-color: #1c3374;
+    color: white;
+    flex-shrink: 0;
+    margin-right: 20%;
+    padding: 58px 61px 62px 170px;
+    position: relative;
+    transition: margin 300ms ease-in;
+    width: 100%;
+
+    @media screen and (max-width: 767px) {
+      padding: 44px 18px;
+    }
+
+    &--hidden-lg {
+      margin: 0;
+      margin-left: -100%;
+    }
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: bold;
+
+    @media screen and (max-width: 767px) {
+      margin-left: 105px;
+      line-height: 1.5;
+    }
+  }
+
+  &__photo {
+    border-radius: 50%;
+    height: 80px;
+    left: 62px;
+    position: absolute;
+    top: 62px;
+    width: 80px;
+
+    @media screen and (max-width: 767px) {
+      height: 68px;
+      width: 68px;
+      left: 40px;
+      top: 40px;
+    }
+  }
+
+  &__text {
+    line-height: 1.4;
+    margin-top: 16px;
+
+    @media screen and (max-width: 767px) {
+      margin-top: 18px;
+      text-align: center;
+    }
+  }
+}
+
+// секция отзывы. Конец

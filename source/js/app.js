@@ -5,9 +5,11 @@ import activateTabs from './tabs';
 
 function app() {
   const trainersSlider = createSlider('trainers', { lg: 4, md: 2, sm: 1 });
+  const reviewsSlider = createSlider('reviews', { lg: 1 });
 
   activateTabs();
   trainersSlider.activate();
+  reviewsSlider.activate();
 }
 
 function docReady(fn) {
