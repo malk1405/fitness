@@ -1498,6 +1498,10 @@
       font-weight: bold;
       margin: 0;
 
+      &::after {
+        content: ":";
+      }
+
       @media screen and (max-width: 1365px) {
         font-size: 20px;
       }
@@ -1508,6 +1512,7 @@
     }
 
     &__text {
+      margin: 0;
       margin-top: 10px;
       font-size: 14px;
 
