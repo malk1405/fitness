@@ -1324,5 +1324,209 @@
     }
   }
 }
-
 // секция отзывы. Конец
+
+// секция контакты.
+.contacts {
+  display: flex;
+
+  @media screen and (max-width: 1365px) {
+    display: block;
+  }
+
+  &__container {
+    border-top: 1px solid $primary;
+    padding: 68px 120px;
+    width: 50%;
+
+    @media screen and (max-width: 1365px) {
+      width: 100%;
+      border: none;
+    }
+
+    &--form {
+      background-color: $primary;
+      color: white;
+      padding-left: 0;
+      padding-right: 170px;
+    }
+
+    @media screen and (max-width: 1365px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &-wrapper {
+    &-form {
+      margin-left: auto;
+      width: 410px;
+    }
+
+    &-form,
+    &-info {
+      @media screen and (max-width: 1365px) {
+        margin: 0 auto;
+        width: 472px;
+      }
+
+      @media screen and (max-width: 767px) {
+        width: 290px;
+      }
+    }
+  }
+
+  &__header {
+    margin-bottom: 45px;
+
+    @media screen and (max-width: 1365px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &-form {
+    &__container {
+      display: flex;
+
+      @media screen and (max-width: 767px) {
+        display: block;
+      }
+    }
+
+    &__field {
+      font-size: 14px;
+      position: relative;
+      width: 190px;
+
+      & + & {
+        margin-left: auto;
+
+        @media screen and (max-width: 767px) {
+          margin-top: 40px;
+        }
+      }
+
+      @media screen and (max-width: 1365px) {
+        width: 206px;
+      }
+
+      @media screen and (max-width: 767px) {
+        width: 100%;
+      }
+    }
+
+    &__input {
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid white;
+      color: inherit;
+      font-size: 14px;
+      outline: none;
+      padding-bottom: 5px;
+      width: 100%;
+    }
+
+    &__label {
+      left: 0;
+      position: absolute;
+      top: 0;
+      transition: top 0.3s ease-in, font 0.3s ease-in;
+    }
+
+    &__input:focus + &__label,
+    &__input:valid + &__label {
+      font-size: 10px;
+      top: -15px;
+    }
+
+    &__button {
+      background-color: transparent;
+      border: 3px solid white;
+      color: inherit;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      line-height: 48px;
+      margin-top: 28px;
+      text-transform: uppercase;
+      width: 100%;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+      }
+
+      @media screen and (max-width: 767px) {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  &-info {
+    display: flex;
+    margin-left: 4px;
+
+    @media screen and (max-width: 767px) {
+      display: block;
+    }
+
+    &::after {
+      background-color: $primary;
+      content: "";
+      display: block;
+      margin: 0 60px;
+      width: 1px;
+
+      @media screen and (max-width: 1365px) {
+        margin: 0 48px;
+      }
+
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    &__list {
+      margin: 0;
+
+      & + & {
+        order: 2;
+      }
+    }
+
+    &__label {
+      font-weight: bold;
+      margin: 0;
+
+      @media screen and (max-width: 1365px) {
+        font-size: 20px;
+      }
+
+      @media screen and (max-width: 767px) {
+        margin-top: 28px;
+      }
+    }
+
+    &__text {
+      margin-top: 10px;
+      font-size: 14px;
+
+      @media screen and (max-width: 1365px) {
+        font-size: 18px;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &__text + &__label {
+      margin-top: 21px;
+
+      @media screen and (max-width: 1365px) {
+        margin-top: 28px;
+      }
+    }
+  }
+}
+// секция контакты. Конец

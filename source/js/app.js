@@ -2,6 +2,7 @@
 
 import createSlider from './slider';
 import activateTabs from './tabs';
+import activateForm from './form';
 
 function app() {
   const trainersSlider = createSlider('trainers', { lg: 4, md: 2, sm: 1 });
@@ -10,6 +11,7 @@ function app() {
   activateTabs();
   trainersSlider.activate();
   reviewsSlider.activate();
+  activateForm();
 }
 
 function docReady(fn) {
