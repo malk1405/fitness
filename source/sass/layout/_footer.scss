@@ -1,0 +1,35 @@
+.footer {
+  // Начало
+  margin-bottom: 30px;
+  background-color: #d10a421c;
+  position: relative;
+
+  &#{&} * {
+    background-color: #d10a421c;
+  }
+
+  &-bg {
+    background-image: url("../img/footerBg-lg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 108px;
+    left: 0;
+    margin-bottom: 40px;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+
+    @media screen and (max-width: 1365px) {
+      background-image: url("../img/footerBg-md.png");
+      height: 114px;
+    }
+
+    @media screen and (max-width: 767px) {
+      background-image: url("../img/footerBg-sm.png");
+      height: 260px;
+    }
+  }
+  // Конец
+
+  margin-top: auto;
+}

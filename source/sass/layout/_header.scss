@@ -1,21 +1,25 @@
+.top-container {
+  background: url("../img/mainBg.jpg") no-repeat 10%;
+  background-size: cover;
+}
+
 .header {
   font-size: 26px;
   left: 0;
   line-height: 1em;
-  padding-top: 30px;
-  position: absolute;
+  padding: 30px 0;
   top: 0;
   width: 100%;
   z-index: 10;
 
   @media screen and (max-width: 1365px) {
     font-size: 24px;
-    padding-top: 40px;
+    padding: 40px 0;
   }
 
   @media screen and (max-width: 767px) {
     font-size: 20px;
-    padding-top: 20px;
+    padding: 20px 0;
   }
 }
 

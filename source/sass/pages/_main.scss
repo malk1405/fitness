@@ -1,17 +1,15 @@
 .fitness {
-  background: url("../img/mainBg.jpg") no-repeat 10%;
-  background-size: cover;
   color: white;
-  height: 658px;
-  padding: 51px 0;
+  margin-top: -37px;
+  padding-bottom: 51px;
 
   @media screen and (max-width: 1365px) {
-    height: 554px;
-    padding: 82px 0;
+    margin-top: -23px;
+    padding-bottom: 82px;
   }
 
   @media screen and (max-width: 767px) {
-    height: 491px;
+    margin-top: 16px;
   }
 }
 
