@@ -1,35 +1,123 @@
 .footer {
-  // Начало
-  margin-bottom: 30px;
-  background-color: #d10a421c;
-  position: relative;
+  background-color: #030a1a;
+  margin-top: auto;
 
-  &#{&} * {
-    background-color: #d10a421c;
-  }
-
-  &-bg {
-    background-image: url("../img/footerBg-lg.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 108px;
-    left: 0;
-    margin-bottom: 40px;
-    position: absolute;
-    width: 100%;
-    z-index: -1;
+  &-container {
+    align-items: center;
+    color: white;
+    display: flex;
+    font-size: 14px;
+    padding: 42px 0;
+    position: relative;
 
     @media screen and (max-width: 1365px) {
-      background-image: url("../img/footerBg-md.png");
-      height: 114px;
+      padding: 45px 0;
     }
 
     @media screen and (max-width: 767px) {
-      background-image: url("../img/footerBg-sm.png");
-      height: 260px;
+      flex-direction: column;
+      padding-bottom: 50px;
+      padding-top: 40px;
+    }
+
+    &__section {
+      width: 15%;
+
+      @media screen and (max-width: 767px) {
+        width: 100%;
+      }
+
+      &--central {
+        flex-grow: 1;
+      }
     }
   }
-  // Конец
 
-  margin-top: auto;
+  &__links {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      height: 120px;
+      justify-content: flex-start;
+      width: 100%;
+    }
+  }
+
+  &__link {
+    line-height: 1.5;
+    margin: 0 20px;
+
+    @media screen and (max-width: 1365px) {
+      margin: 0 15px;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 16px;
+      line-height: 2.4;
+      margin: 0;
+      width: 10em;
+    }
+
+    &--logo {
+      margin: 0;
+      left: 0;
+      order: -1;
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+
+      @media screen and (max-width: 767px) {
+        position: static;
+        transform: none;
+      }
+    }
+  }
+
+  &__social {
+    &-links {
+      align-items: center;
+      justify-content: flex-end;
+      display: flex;
+
+      @media screen and (max-width: 767px) {
+        margin-top: 22px;
+        justify-content: flex-start;
+      }
+    }
+
+    &-link {
+      height: 24px;
+
+      & + & {
+        margin-left: 25px;
+
+        @media screen and (max-width: 1365px) {
+          margin-left: 20px;
+        }
+
+        @media screen and (max-width: 767px) {
+          height: 27px;
+          margin-left: 35px;
+        }
+      }
+
+      &--vk {
+        height: 13px;
+
+        @media screen and (max-width: 767px) {
+          height: 17px;
+        }
+      }
+
+      & a,
+      & img {
+        display: block;
+        height: 100%;
+      }
+    }
+  }
 }
