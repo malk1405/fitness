@@ -2,16 +2,13 @@
   height: 100%;
   margin: 0 auto;
   max-width: 100%;
-  padding: 0 103px;
-  width: 1366px;
+  width: 1160px;
 
   @media screen and (max-width: 1365px) {
-    padding: 0 45px;
-    width: 768px;
+    width: 678px;
   }
 
   @media screen and (max-width: 767px) {
-    padding: 0 15px;
-    width: 320px;
+    width: 290px;
   }
 }
