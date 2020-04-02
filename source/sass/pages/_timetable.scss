@@ -27,35 +27,78 @@
       @media screen and (max-width: 1365px) {
         padding-left: 70px;
       }
+
+      @media screen and (max-width: 767px) {
+        padding-left: 0;
+      }
     }
 
     border-collapse: collapse;
     font-size: 18px;
     text-align: center;
+
+    @media screen and (max-width: 767px) {
+      font-size: 16px;
+    }
+  }
+
+  &__row,
+  &__cell {
+    height: 110px;
+
+    @media screen and (max-width: 1365px) {
+      height: 108px;
+    }
+
+    @media screen and (max-width: 767px) {
+      height: 80px;
+    }
+  }
+  &__row--head,
+  &__cell--day,
+  &__cell--corner,
+  &__toggle {
+    height: 67px;
+
+    @media screen and (max-width: 1365px) {
+      height: 65px;
+    }
+
+    @media screen and (max-width: 767px) {
+      height: 60px;
+    }
   }
 
   &__row {
     display: flex;
-  }
+    margin-top: 8px;
+    overflow: hidden;
 
-  &__day {
-    border: 2px solid $primary;
-    line-height: 62px;
+    &--head {
+      margin-top: 0;
+      position: relative;
+      z-index: 1;
+
+      @media screen and (max-width: 767px) {
+        flex-direction: column;
+      }
+    }
   }
 
   &__cell {
     align-items: center;
-    background-color: #f8f9fc;
     display: flex;
-    height: 110px;
+    flex-shrink: 0;
     justify-content: center;
-    margin-top: 8px;
     padding: 0;
     width: 148px;
 
     @media screen and (max-width: 1365px) {
-      height: 108px;
       width: 146px;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 222px;
     }
 
     &:not(:last-child) {
@@ -66,17 +109,6 @@
     &--day,
     &--time {
       background-color: white;
-      border: 2px solid $primary;
-    }
-
-    &--corner,
-    &--day {
-      height: 67px;
-      margin-top: 0;
-
-      @media screen and (max-width: 1365px) {
-        height: 65px;
-      }
     }
 
     &--corner,
@@ -85,13 +117,83 @@
 
       @media screen and (max-width: 1365px) {
         position: absolute;
-        left: 0px;
+        left: 0;
         width: 62px;
+      }
+
+      @media screen and (max-width: 767px) {
+        position: static;
+        width: 60px;
       }
     }
 
     &--corner {
       border: none;
+
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    &--day {
+      @media screen and (max-width: 767px) {
+        margin-bottom: -2px;
+        margin-left: 68px;
+        width: 173px;
+      }
+    }
+
+    &--data {
+      background-color: #f8f9fc;
+    }
+  }
+
+  &__cell--day,
+  &__cell--time,
+  &__toggle {
+    border: 2px solid $primary;
+  }
+
+  &__toggle {
+    background-color: white;
+    color: transparent;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 51px;
+
+    @media screen and (max-width: 767px) {
+      display: block;
+    }
+
+    &::before {
+      content: "";
+      border-bottom: 2px solid $primary;
+      border-left: 2px solid $primary;
+      display: block;
+      height: 14px;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform-origin: left bottom;
+      transform: translateY(-5px) rotate(-45deg);
+      width: 14px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    &__table--header-visible &__row--head {
+      overflow: visible;
+    }
+
+    &__table--header-visible &__cell--data,
+    &__table--header-visible &__cell--time {
+      opacity: 0.2;
+    }
+
+    &__table--header-visible ~ &__toggle::before {
+      transform: translateY(-19px) rotate(-225deg);
     }
   }
 
