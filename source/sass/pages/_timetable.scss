@@ -1,21 +1,37 @@
 .timetable {
-  margin-bottom: 120px;
+  margin: 120px 0;
+
+  @media screen and (max-width: 1365px) {
+    margin: 80px 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin: 70px 0;
+  }
 
   &__header {
     text-align: center;
     margin-bottom: 50px;
+
+    @media screen and (max-width: 1365px) {
+      margin-bottom: 40px;
+    }
   }
 
   &__table {
     &-container {
-      position: relative;
+      overflow: hidden;
       width: 100%;
+
+      @media screen and (max-width: 1365px) {
+        padding-left: 70px;
+      }
     }
 
     border-collapse: collapse;
     font-size: 18px;
+    position: relative;
     text-align: center;
-    width: 100%;
   }
 
   &__row {
@@ -28,15 +44,22 @@
   }
 
   &__cell {
+    align-items: center;
     background-color: #f8f9fc;
+    display: flex;
     height: 110px;
-    line-height: 110px;
+    justify-content: center;
     margin-top: 8px;
     padding: 0;
-    width: 150px;
+    width: 148px;
 
-    & + & {
-      margin-left: auto;
+    @media screen and (max-width: 1365px) {
+      height: 108px;
+      width: 146px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 8px;
     }
 
     &--corner,
@@ -48,18 +71,53 @@
 
     &--corner,
     &--day {
-      height: 66px;
-      line-height: 62px;
+      height: 67px;
       margin-top: 0;
+
+      @media screen and (max-width: 1365px) {
+        height: 65px;
+      }
     }
 
     &--corner,
     &--time {
       width: 65px;
+
+      @media screen and (max-width: 1365px) {
+        position: absolute;
+        left: -70px;
+        width: 62px;
+      }
     }
 
     &--corner {
       border: none;
+    }
+  }
+
+  &__scroll {
+    display: none;
+
+    @media screen and (max-width: 1365px) {
+      background-color: #feebef;
+      display: block;
+      height: 4px;
+      margin-top: 4px;
+      position: relative;
+
+      &::before {
+        background-color: #ed0233;
+        content: "";
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 50%;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      display: none;
     }
   }
 }
