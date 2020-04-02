@@ -21,6 +21,7 @@
   &__table {
     &-container {
       overflow: hidden;
+      position: relative;
       width: 100%;
 
       @media screen and (max-width: 1365px) {
@@ -30,7 +31,6 @@
 
     border-collapse: collapse;
     font-size: 18px;
-    position: relative;
     text-align: center;
   }
 
@@ -65,7 +65,7 @@
     &--corner,
     &--day,
     &--time {
-      background-color: transparent;
+      background-color: white;
       border: 2px solid $primary;
     }
 
@@ -85,7 +85,7 @@
 
       @media screen and (max-width: 1365px) {
         position: absolute;
-        left: -70px;
+        left: 0px;
         width: 62px;
       }
     }
