@@ -1427,6 +1427,10 @@
       transition: top 0.3s ease-in, font 0.3s ease-in;
     }
 
+    &__input:hover + &__label {
+      top: -5px;
+    }
+
     &__input:focus + &__label,
     &__input:valid + &__label {
       font-size: 10px;
