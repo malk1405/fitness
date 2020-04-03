@@ -3440,9 +3440,9 @@ module.exports = g;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./slider */ "./source/js/slider.js");
-/* harmony import */ var _tabs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tabs */ "./source/js/tabs.js");
-/* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./form */ "./source/js/form.js");
+/* harmony import */ var _components_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/slider */ "./source/js/components/slider.js");
+/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/tabs */ "./source/js/components/tabs.js");
+/* harmony import */ var _components_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/form */ "./source/js/components/form.js");
 
 
 
@@ -3450,28 +3450,28 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function app() {
-  var trainersSlider = Object(_slider__WEBPACK_IMPORTED_MODULE_0__["default"])('trainers', {
+  var trainersSlider = Object(_components_slider__WEBPACK_IMPORTED_MODULE_0__["default"])('trainers', {
     lg: 4,
     md: 2,
     sm: 1
   });
-  var reviewsSlider = Object(_slider__WEBPACK_IMPORTED_MODULE_0__["default"])('reviews', {
+  var reviewsSlider = Object(_components_slider__WEBPACK_IMPORTED_MODULE_0__["default"])('reviews', {
     lg: 1
   });
-  Object(_tabs__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  Object(_components_tabs__WEBPACK_IMPORTED_MODULE_1__["default"])();
   trainersSlider.activate();
   reviewsSlider.activate();
-  Object(_form__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  Object(_components_form__WEBPACK_IMPORTED_MODULE_2__["default"])();
 }
 
 app();
 
 /***/ }),
 
-/***/ "./source/js/form.js":
-/*!***************************!*\
-  !*** ./source/js/form.js ***!
-  \***************************/
+/***/ "./source/js/components/form.js":
+/*!**************************************!*\
+  !*** ./source/js/components/form.js ***!
+  \**************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3479,6 +3479,7 @@ app();
 __webpack_require__.r(__webpack_exports__);
 var activateForm = function activateForm() {
   var form = document.querySelector('.contacts-form');
+  if (!form) return;
   form.addEventListener('submit', function (event) {
     event.preventDefault();
     window.alert('Данные отправлены');
@@ -3490,10 +3491,10 @@ var activateForm = function activateForm() {
 
 /***/ }),
 
-/***/ "./source/js/slider.js":
-/*!*****************************!*\
-  !*** ./source/js/slider.js ***!
-  \*****************************/
+/***/ "./source/js/components/slider.js":
+/*!****************************************!*\
+  !*** ./source/js/components/slider.js ***!
+  \****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3531,8 +3532,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_14__);
 /* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
 /* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _utils_utils_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./utils/utils.js */ "./source/js/utils/utils.js");
-/* harmony import */ var _utils_sizes__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./utils/sizes */ "./source/js/utils/sizes.js");
+/* harmony import */ var _utils_utils_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../utils/utils.js */ "./source/js/utils/utils.js");
+/* harmony import */ var _utils_sizes__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../utils/sizes */ "./source/js/utils/sizes.js");
 
 
 
@@ -3576,6 +3577,9 @@ function createSlider(className, nums) {
   var cards = document.querySelectorAll(".".concat(className, "__card"));
   var prevBtn = document.querySelector(".".concat(className, "__prev"));
   var nextBtn = document.querySelector(".".concat(className, "__next"));
+  if (!cards || !prevBtn || !nextBtn) return {
+    activate: function activate() {}
+  };
   var WINDOW_SIZE = createConfig(_utils_sizes__WEBPACK_IMPORTED_MODULE_17__["default"], nums);
   var index = 0;
 
@@ -3638,10 +3642,10 @@ function createSlider(className, nums) {
 
 /***/ }),
 
-/***/ "./source/js/tabs.js":
-/*!***************************!*\
-  !*** ./source/js/tabs.js ***!
-  \***************************/
+/***/ "./source/js/components/tabs.js":
+/*!**************************************!*\
+  !*** ./source/js/components/tabs.js ***!
+  \**************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3651,7 +3655,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _utils_utils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utils/utils.js */ "./source/js/utils/utils.js");
+/* harmony import */ var _utils_utils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/utils.js */ "./source/js/utils/utils.js");
 
 
 
@@ -3661,6 +3665,7 @@ __webpack_require__.r(__webpack_exports__);
 function activateTabs() {
   var tabs = document.querySelector('.abonement__months');
   var plans = document.querySelectorAll('.abonement__plans');
+  if (!plans || !tabs) return;
   tabs.addEventListener('change', function (event) {
     var id = +event.target.value;
     if (!plans[id]) return;
