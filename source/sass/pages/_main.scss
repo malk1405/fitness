@@ -115,15 +115,12 @@
 }
 
 .fitness__banner {
-  background-image: url("../img/mainBanner.jpg");
+  background-image: url("../img/main-banner.jpg");
   background-size: cover;
   height: 556px;
   margin-right: 200px;
   margin-left: 64px;
   width: 500px;
-  // & img {
-  //   height: 556px;
-  // }
 
   @media screen and (max-width: 1365px) {
     background-position: 45%;
@@ -131,10 +128,6 @@
     margin-right: 0;
     margin-left: 30px;
     width: 324px;
-
-    // & img {
-    //   height: 390px;
-    // }
   }
 
   @media screen and (max-width: 767px) {
