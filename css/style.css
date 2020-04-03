@@ -976,7 +976,6 @@ ul {
 
 .abonement__months {
   border-bottom: 2px solid #78787833;
-  color: #10265480;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -999,15 +998,19 @@ ul {
       width: 100%; } }
 
 .abonement__month {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   padding-bottom: 11px; }
   @media screen and (max-width: 767px) {
     .abonement__month {
       padding-bottom: 12px; } }
   .abonement__month > label {
+    opacity: 0.5;
     position: relative;
     padding-right: 2px; }
     .abonement__month > label:hover {
-      cursor: pointer; }
+      cursor: pointer;
+      opacity: 0.8; }
     .abonement__month > label::after {
       background-color: #d10a42;
       bottom: -16px;
@@ -1022,7 +1025,7 @@ ul {
   .abonement__month > input {
     display: none; }
     .abonement__month > input:checked + label {
-      color: #102654; }
+      opacity: 1; }
       .abonement__month > input:checked + label::after {
         display: block; }
 
