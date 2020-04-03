@@ -3464,15 +3464,7 @@ function app() {
   Object(_form__WEBPACK_IMPORTED_MODULE_2__["default"])();
 }
 
-function docReady(fn) {
-  if (document.readyState === 'complete' || document.readyState === 'interactive') {
-    setTimeout(fn, 1);
-  } else {
-    document.addEventListener('DOMContentLoaded', fn);
-  }
-}
-
-docReady(app);
+app();
 
 /***/ }),
 
