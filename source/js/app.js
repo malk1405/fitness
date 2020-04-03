@@ -1,8 +1,8 @@
 'use strict';
 
-import createSlider from './slider';
-import activateTabs from './tabs';
-import activateForm from './form';
+import createSlider from './components/slider';
+import activateTabs from './components/tabs';
+import activateForm from './components/form';
 
 function app() {
   const trainersSlider = createSlider('trainers', { lg: 4, md: 2, sm: 1 });

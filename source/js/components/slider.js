@@ -1,7 +1,7 @@
 'use strict';
 
-import { setClass } from './utils/utils.js';
-import sizes from './utils/sizes';
+import { setClass } from '../utils/utils.js';
+import sizes from '../utils/sizes';
 
 const createConfig = (sizes, nums) => {
   const res = {};
@@ -15,6 +15,8 @@ function createSlider(className, nums) {
   const cards = document.querySelectorAll(`.${className}__card`);
   const prevBtn = document.querySelector(`.${className}__prev`);
   const nextBtn = document.querySelector(`.${className}__next`);
+
+  if (!cards || !prevBtn || !nextBtn) return { activate() {} };
 
   const WINDOW_SIZE = createConfig(sizes, nums);
   let index = 0;

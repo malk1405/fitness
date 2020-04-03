@@ -1,10 +1,12 @@
 'use strict';
 
-import { setClass } from './utils/utils.js';
+import { setClass } from '../utils/utils.js';
 
 function activateTabs() {
   const tabs = document.querySelector('.abonement__months');
   const plans = document.querySelectorAll('.abonement__plans');
+
+  if (!plans || !tabs) return;
 
   tabs.addEventListener('change', function(event) {
     const id = +event.target.value;
