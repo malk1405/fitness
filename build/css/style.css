@@ -1028,10 +1028,10 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 38px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 100%; }
   @media screen and (max-width: 1365px) {
     .abonement__plans {
@@ -1039,16 +1039,15 @@ ul {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
-      margin-top: 44px;
       width: 442px; } }
   @media screen and (max-width: 767px) {
     .abonement__plans {
-      margin-top: 34px;
       width: 100%; } }
 
 .abonement__plan {
   background-color: white;
   height: 448px;
+  margin-top: 38px;
   padding: 7px;
   text-align: center;
   width: 360px; }
@@ -1056,12 +1055,14 @@ ul {
     background: linear-gradient(135deg, #ed0233 17.6%, #003eb7 95.31%); }
   @media screen and (max-width: 1365px) {
     .abonement__plan {
+      margin-top: 44px;
       width: 100%; }
       .abonement__plan + .abonement__plan {
         margin-top: 40px; } }
   @media screen and (max-width: 767px) {
     .abonement__plan {
-      height: 384px; }
+      height: 384px;
+      margin-top: 34px; }
       .abonement__plan + .abonement__plan {
         margin-top: 35px; } }
 
