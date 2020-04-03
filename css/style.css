@@ -1907,6 +1907,8 @@ ul {
     top: 0;
     -webkit-transition: top 0.3s ease-in, font 0.3s ease-in;
     transition: top 0.3s ease-in, font 0.3s ease-in; }
+  .contacts-form__input:hover + .contacts-form__label {
+    top: -5px; }
   .contacts-form__input:focus + .contacts-form__label,
   .contacts-form__input:valid + .contacts-form__label {
     font-size: 10px;
