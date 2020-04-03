@@ -1770,7 +1770,6 @@ ul {
   text-align: center; }
 
 .reviews__slider {
-  height: 242px;
   margin: 50px auto 0;
   width: 560px; }
   @media screen and (max-width: 1365px) {
@@ -1779,7 +1778,6 @@ ul {
       width: 100%; } }
   @media screen and (max-width: 767px) {
     .reviews__slider {
-      height: 335px;
       margin-top: 42px; } }
 
 .reviews__card {
