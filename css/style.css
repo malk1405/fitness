@@ -2,31 +2,36 @@
   font-family: "BebasNeue";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/bebas-neue.woff2") format("woff2"), url("../fonts/bebas-neue.woff") format("woff"); }
+  src: url("../fonts/bebas-neue.woff2") format("woff2"), url("../fonts/bebas-neue.woff") format("woff");
+  font-display: swap; }
 
 @font-face {
   font-family: "BebasNeue";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/bebas-neue-bold.woff2") format("woff2"), url("../fonts/bebas-neue-bold.woff") format("woff"); }
+  src: url("../fonts/bebas-neue-bold.woff2") format("woff2"), url("../fonts/bebas-neue-bold.woff") format("woff");
+  font-display: swap; }
 
 @font-face {
   font-family: "Roboto Condensed";
   font-style: normal;
   font-weight: 300;
-  src: url("../fonts/roboto-condensed-light.woff2") format("woff2"), url("../fonts/roboto-condensed-light.woff") format("woff"); }
+  src: url("../fonts/roboto-condensed-light.woff2") format("woff2"), url("../fonts/roboto-condensed-light.woff") format("woff");
+  font-display: swap; }
 
 @font-face {
   font-family: "Roboto Condensed";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/roboto-condensed.woff") format("woff2"), url("../fonts/roboto-condensed.woff") format("woff"); }
+  src: url("../fonts/roboto-condensed.woff") format("woff2"), url("../fonts/roboto-condensed.woff") format("woff");
+  font-display: swap; }
 
 @font-face {
   font-family: "Roboto Condensed";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/roboto-condensed-bold.woff2") format("woff2"), url("../fonts/roboto-condensed-bold.woff") format("woff"); }
+  src: url("../fonts/roboto-condensed-bold.woff2") format("woff2"), url("../fonts/roboto-condensed-bold.woff") format("woff");
+  font-display: swap; }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -469,7 +474,7 @@ ul {
   width: 1px; }
 
 .section-header {
-  font-family: "BebasNeue";
+  font-family: "BebasNeue", sans-serif;
   font-size: 49px;
   font-weight: bold;
   letter-spacing: 0.03em;
@@ -546,7 +551,7 @@ ul {
 
 .header__phone {
   color: white;
-  font-family: "BebasNeue";
+  font-family: "BebasNeue" sans-serif;
   letter-spacing: 0.04em;
   font-weight: bold;
   text-decoration: none; }
@@ -729,7 +734,7 @@ ul {
       padding-top: 29px; } }
 
 .fitness__city {
-  font-family: "BebasNeue";
+  font-family: "BebasNeue", sans-serif;
   font-size: 49px;
   letter-spacing: 0.025em;
   text-transform: uppercase; }
@@ -741,7 +746,7 @@ ul {
       font-size: 28px; } }
 
 .fitness__title {
-  font-family: "BebasNeue";
+  font-family: "BebasNeue", sans-serif;
   font-size: 112px;
   font-weight: bold;
   letter-spacing: 0.02em;
@@ -1182,7 +1187,7 @@ ul {
   padding: 0 1px; }
 
 .promo__title {
-  font-family: "BebasNeue";
+  font-family: "BebasNeue", sans-serif;
   font-size: 90px;
   -ms-flex-preferred-size: 60%;
       flex-basis: 60%;
@@ -2145,6 +2150,3 @@ ul {
 body {
   font-family: "Roboto Condensed", sans-serif;
   color: #102654; }
-
-h1 {
-  font-family: "BebasNeue", sans-serif; }
