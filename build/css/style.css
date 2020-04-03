@@ -1006,6 +1006,8 @@ ul {
   .abonement__month > label {
     position: relative;
     padding-right: 2px; }
+    .abonement__month > label:hover {
+      cursor: pointer; }
     .abonement__month > label::after {
       background-color: #d10a42;
       bottom: -16px;
@@ -2098,7 +2100,8 @@ ul {
     position: absolute;
     right: 0;
     top: 0;
-    width: 51px; }
+    width: 51px;
+    z-index: 2; }
     @media screen and (max-width: 767px) {
       .timetable__toggle {
         display: block; } }

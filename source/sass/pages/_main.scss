@@ -351,6 +351,10 @@
     position: relative;
     padding-right: 2px;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     &::after {
       background-color: #d10a42;
       bottom: -16px;
