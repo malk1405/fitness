@@ -319,7 +319,6 @@
 
 .abonement__months {
   border-bottom: 2px solid #78787833;
-  color: #10265480;
   display: flex;
   font-size: 20px;
   justify-content: space-between;
@@ -341,6 +340,7 @@
 }
 
 .abonement__month {
+  flex-shrink: 0;
   padding-bottom: 11px;
 
   @media screen and (max-width: 767px) {
@@ -348,11 +348,13 @@
   }
 
   & > label {
+    opacity: 0.5;
     position: relative;
     padding-right: 2px;
 
     &:hover {
       cursor: pointer;
+      opacity: 0.8;
     }
 
     &::after {
@@ -374,7 +376,7 @@
     display: none;
 
     &:checked + label {
-      color: $primary;
+      opacity: 1;
 
       &::after {
         display: block;
