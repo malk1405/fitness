@@ -1244,7 +1244,6 @@
   }
 
   &__slider {
-    height: 242px;
     margin: 50px auto 0;
     width: 560px;
 
@@ -1254,7 +1253,6 @@
     }
 
     @media screen and (max-width: 767px) {
-      height: 335px;
       margin-top: 42px;
     }
   }
