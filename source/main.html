@@ -7,6 +7,7 @@
     <meta name="description" content="site for portfolio on github" />
     <title>Фитнес центр</title>
     <link rel="stylesheet" href="css/style.min.css" />
+    <script src="js/vendors.js"></script>
   </head>
   <body>
     <div class="body-wrapper">
@@ -43,7 +44,22 @@
                 </div>
                 <a href="#abonements" class="fitness__buy">Купить абонемент</a>
               </div>
-              <div class="fitness__banner"></div>
+              <div class="fitness__banner">
+                <picture>
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="img/blank.gif 1w"
+                    sizes="1px"
+                  />
+                  <source
+                    media="(max-width: 1365px)"
+                    srcset="img/main-banner-md.jpg 324w"
+                    sizes="324px"
+                  />
+                  <source srcset="img/main-banner-lg.jpg 500w" sizes="500px" />
+                  <img src="img/blank.gif" />
+                </picture>
+              </div>
               <div class="fitness__social">
                 <ul>
                   <li><a href="#">FB</a></li>
@@ -841,7 +857,7 @@
                 /></a>
               </li>
               <li class="footer__social-link" title="Facebook">
-                <a href="#"><img src="img/footer-link-fb.png" alt="FB"/></a>
+                <a href="#"><img src="img/footer-link-fb.png" alt="FB" /></a>
               </li>
             </ul>
           </div>
@@ -849,6 +865,6 @@
       </footer>
       <!-- Футер. Конец -->
     </div>
-    <script src="js/script.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
