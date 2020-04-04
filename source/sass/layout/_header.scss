@@ -1,6 +1,19 @@
 .top-container {
-  background: url("../img/main-bg.jpg") no-repeat 10%;
-  background-size: cover;
+  // background: url("../img/main-bg.jpg") no-repeat 10%;
+  // background-size: cover;
+  background: radial-gradient(
+    circle farthest-corner at 10.03% 80.06%,
+    #003d85,
+    #b80027 50%
+  );
+
+  @media screen and (max-width: 767px) {
+    background: radial-gradient(
+      circle farthest-corner at 10.03% 80.06%,
+      #003d85,
+      #b80027 80%
+    );
+  }
 }
 
 .header {
