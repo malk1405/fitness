@@ -9,6 +9,7 @@
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
     "babel-loader": "^8.1.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
     "browser-sync": "2.26.x",
     "core-js": "^3.6.4",
     "eslint": "4.16.0",

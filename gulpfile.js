@@ -84,7 +84,10 @@ gulp.task('js', () => {
                       },
                     ],
                   ],
-                  plugins: ['@babel/plugin-transform-runtime'],
+                  plugins: [
+                    '@babel/plugin-transform-runtime',
+                    '@babel/plugin-transform-async-to-generator',
+                  ],
                 },
               },
             },
