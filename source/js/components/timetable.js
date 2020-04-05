@@ -52,13 +52,20 @@ const bodyRows = [
 ];
 
 const generateTable = (table) => {
+  const thead = table.querySelector('.timetable__head');
+  const days = thead.querySelectorAll('.timetable__cell--day');
+  days.forEach((day, i) => {
+    day.dataset.day = i;
+  });
+
   const tbody = table.querySelector('tbody');
   let row = tbody.querySelector('.timetable__row');
-  const res = { days: [], cells: [] };
+  const res = { thead, tbody, days, cells: [], times: [] };
 
   bodyRows.forEach(({ time, data }, i) => {
     const header = row.querySelector('.timetable__cell--time');
     header.textContent = time;
+    res.times.push(header);
 
     const cells = row.querySelectorAll('.timetable__cell--data');
     cells.forEach((cell, j) => {
@@ -67,6 +74,7 @@ const generateTable = (table) => {
       cell.dataset.time = i;
     });
 
+    res.cells.push(cells);
     tbody.appendChild(row);
     row = row.cloneNode(true);
   });
@@ -74,14 +82,38 @@ const generateTable = (table) => {
   return res;
 };
 
+const swapClass = (elems, prev, next, className) => {
+  elems.forEach((el) => {
+    el[prev].classList.remove(className);
+    el[next].classList.add(className);
+  });
+};
+
 const activateTimetable = () => {
   const timetable = document.querySelector('.timetable');
   if (!timetable) return;
 
   const table = timetable.querySelector('.timetable__table');
-  const { days, cells } = generateTable(table);
+  const { days, cells, tbody, thead } = generateTable(table);
+  let selectedDay = 0;
 
   const toggleButtons = timetable.querySelectorAll('.timetable__toggle');
+
+  const selectDay = (event) => {
+    const targetDay = event.target.dataset.day;
+    console.log(targetDay);
+    if (!targetDay) return;
+
+    swapClass(
+      [days, ...cells],
+      selectedDay,
+      targetDay,
+      'timetable__cell--day-selected'
+    );
+    selectedDay = targetDay;
+  };
+
+  thead.addEventListener('click', selectDay);
 
   const toggleHeader = (event) => {
     setClass(
@@ -91,6 +123,7 @@ const activateTimetable = () => {
     );
   };
 
+  thead.addEventListener('click', toggleHeader);
   toggleButtons.forEach((button) => {
     button.addEventListener('click', toggleHeader);
   });

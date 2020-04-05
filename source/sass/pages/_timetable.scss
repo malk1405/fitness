@@ -182,6 +182,12 @@
       }
     }
 
+    &--time {
+      @media screen and (max-width: 767px) {
+        order: -5;
+      }
+    }
+
     &--data {
       background-color: #f8f9fc;
 
