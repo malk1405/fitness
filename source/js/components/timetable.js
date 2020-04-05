@@ -72,6 +72,7 @@ const generateTable = (table) => {
       cell.textContent = data[j];
       cell.dataset.day = j;
       cell.dataset.time = i;
+      cell.title = 'Выбрать';
     });
 
     res.cells.push(cells);
@@ -150,6 +151,18 @@ const activateTimetable = () => {
   tbody.addEventListener('mouseout', (event) => {
     onMouse(event, false);
   });
+
+  const selectCell = (event) => {
+    const { day, time } = event.target.dataset;
+    if (!day || !time) return;
+    const cell = event.target;
+    const className = 'timetable__cell--data-selected';
+    cell.title = cell.classList.contains(className) ? 'Выбрать' : 'Удалить';
+
+    cell.classList.toggle(className);
+  };
+
+  tbody.addEventListener('click', selectCell);
 };
 
 export default activateTimetable;

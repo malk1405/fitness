@@ -189,7 +189,12 @@
     }
 
     &--data {
+      cursor: pointer;
       background-color: #f8f9fc;
+
+      &-selected {
+        @extend %cell--bordered;
+      }
 
       &:hover {
         @extend %cell--hovered;

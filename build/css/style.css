@@ -1986,7 +1986,7 @@ ul {
         .contacts-info__text + .contacts-info__label {
           margin-top: 28px; } }
 
-.timetable__cell--day-hovered, .timetable__cell--time-hovered, .timetable__cell--data:hover, .timetable__cell--corner, .timetable__cell--day, .timetable__cell--time, .timetable__toggle {
+.timetable__cell--day-hovered, .timetable__cell--time-hovered, .timetable__cell--data:hover, .timetable__cell--corner, .timetable__cell--day, .timetable__cell--time, .timetable__toggle, .timetable__cell--data-selected {
   border: 2px solid #102654; }
 
 .timetable__cell--day-hovered, .timetable__cell--time-hovered, .timetable__cell--data:hover {
@@ -2120,6 +2120,7 @@ ul {
             -ms-flex-order: -5;
                 order: -5; } }
     .timetable__cell--data {
+      cursor: pointer;
       background-color: #f8f9fc; }
   .timetable__toggle {
     color: transparent;

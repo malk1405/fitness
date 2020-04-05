@@ -3858,6 +3858,7 @@ var generateTable = function generateTable(table) {
       cell.textContent = data[j];
       cell.dataset.day = j;
       cell.dataset.time = i;
+      cell.title = 'Выбрать';
     });
     res.cells.push(cells);
     tbody.appendChild(row);
@@ -3926,6 +3927,19 @@ var activateTimetable = function activateTimetable() {
   tbody.addEventListener('mouseout', function (event) {
     onMouse(event, false);
   });
+
+  var selectCell = function selectCell(event) {
+    var _event$target$dataset2 = event.target.dataset,
+        day = _event$target$dataset2.day,
+        time = _event$target$dataset2.time;
+    if (!day || !time) return;
+    var cell = event.target;
+    var className = 'timetable__cell--data-selected';
+    cell.title = cell.classList.contains(className) ? 'Выбрать' : 'Удалить';
+    cell.classList.toggle(className);
+  };
+
+  tbody.addEventListener('click', selectCell);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (activateTimetable);
