@@ -3886,6 +3886,7 @@ var activateTimetable = function activateTimetable() {
       thead = _generateTable.thead;
 
   var selectedDay = 0;
+  days[selectedDay].classList.add('timetable__cell--day-selected');
   var isHeaderOpen = false;
   var toggleButtons = timetable.querySelectorAll('.timetable__toggle');
 

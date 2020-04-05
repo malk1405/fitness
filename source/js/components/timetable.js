@@ -95,7 +95,10 @@ const activateTimetable = () => {
 
   const table = timetable.querySelector('.timetable__table');
   const { days, times, cells, tbody, thead } = generateTable(table);
+
   let selectedDay = 0;
+  days[selectedDay].classList.add('timetable__cell--day-selected');
+
   let isHeaderOpen = false;
 
   const toggleButtons = timetable.querySelectorAll('.timetable__toggle');
