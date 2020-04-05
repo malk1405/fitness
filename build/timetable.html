@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
-    <p style="color:red; position: absolute; font-weight: bold; top: 150px">
+    <p style="color: red; position: absolute; font-weight: bold; top: 150px;">
       *Пока только верстка, интерактива нет
     </p>
     <div class="body-wrapper">
@@ -158,8 +158,11 @@
               </tbody>
             </table>
             <div class="timetable__scroll"></div>
-            <button type="button" class="timetable__toggle" title="Показать">
+            <button type="button" class="timetable__toggle timetable__toggle--show" title="Показать" data-type="show">
               Показать
+            </button>
+            <button type="button" class="timetable__toggle timetable__toggle--hide" title="Спрятать">
+              Спрятать
             </button>
           </div>
         </div>
@@ -201,6 +204,6 @@
       </footer>
       <!-- Футер. Конец -->
     </div>
-    <script src="js/script.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>

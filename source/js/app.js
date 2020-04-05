@@ -3,6 +3,7 @@
 import createSlider from './components/slider';
 import activateTabs from './components/tabs';
 import activateForm from './components/form';
+import activateTimetable from './components/timetable';
 
 function app() {
   const trainersSlider = createSlider('trainers', { lg: 4, md: 2, sm: 1 });
@@ -12,6 +13,7 @@ function app() {
   trainersSlider.activate();
   reviewsSlider.activate();
   activateForm();
+  activateTimetable();
 }
 
 app();

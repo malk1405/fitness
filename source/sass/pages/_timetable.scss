@@ -1,3 +1,24 @@
+%cell--bordered {
+  border: 2px solid $primary;
+}
+
+%cell--hovered {
+  @extend %cell--bordered;
+  border-color: #ed0233;
+  color: #ed0233;
+}
+
+%th {
+  @extend %cell--bordered;
+  background-color: white;
+}
+
+%th--covered {
+  @extend %cell--hovered;
+  background-color: #ed0233;
+  color: white;
+}
+
 .timetable {
   margin: 120px 0;
 
@@ -85,6 +106,10 @@
     }
   }
 
+  &__row:hover &__cell--time {
+    @extend %th--covered;
+  }
+
   &__cell {
     align-items: center;
     display: flex;
@@ -108,7 +133,7 @@
     &--corner,
     &--day,
     &--time {
-      background-color: white;
+      @extend %th;
     }
 
     &--corner,
@@ -136,26 +161,41 @@
     }
 
     &--day {
+      &-hovered {
+        @extend %th--covered;
+      }
+
       @media screen and (max-width: 767px) {
         margin-bottom: -2px;
         margin-left: 68px;
         width: 173px;
+
+        &-selected {
+          order: -1;
+        }
+
+        &:not(#{&}-selected):hover {
+          background-color: $primary;
+          color: white;
+          cursor: pointer;
+        }
       }
     }
 
     &--data {
       background-color: #f8f9fc;
+
+      &:hover {
+        @extend %cell--hovered;
+      }
     }
   }
 
-  &__cell--day,
-  &__cell--time,
   &__toggle {
-    border: 2px solid $primary;
+    @extend %th;
   }
 
   &__toggle {
-    background-color: white;
     color: transparent;
     display: none;
     position: absolute;
@@ -163,6 +203,10 @@
     top: 0;
     width: 51px;
     z-index: 2;
+
+    &:hover {
+      cursor: pointer;
+    }
 
     @media screen and (max-width: 767px) {
       display: block;
@@ -181,6 +225,13 @@
       transform: translateY(-5px) rotate(-45deg);
       width: 14px;
     }
+
+    &--hide {
+      display: none;
+      &::before {
+        transform: translateY(-19px) rotate(-225deg);
+      }
+    }
   }
 
   @media screen and (max-width: 767px) {
@@ -193,8 +244,14 @@
       opacity: 0.2;
     }
 
-    &__table--header-visible ~ &__toggle::before {
-      transform: translateY(-19px) rotate(-225deg);
+    &__table--header-visible ~ &__toggle {
+      &--show {
+        display: none;
+      }
+
+      &--hide {
+        display: block;
+      }
     }
   }
 
