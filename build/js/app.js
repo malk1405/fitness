@@ -3699,21 +3699,60 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var bodyRows = [{
+  time: '08:00',
+  data: ['CrossFit', 'Aerostretching', 'Hot Iron', 'Pilates', 'Stretching', 'Functional', 'Body Sculpt']
+}, {
+  time: '12:00',
+  data: ['Body Sculpt', 'CrossFit', 'Aerostretching', 'Hot Iron', 'Pilates', 'Stretching', 'Functional']
+}, {
+  time: '18:00',
+  data: ['Functional', 'Body Sculpt', 'CrossFit', 'Aerostretching', 'Hot Iron', 'Pilates', 'Stretching']
+}, {
+  time: '20:00',
+  data: ['Stretching', 'Functional', 'Body Sculpt', 'CrossFit', 'Aerostretching', 'Hot Iron', 'Pilates']
+}];
+
+var generateTable = function generateTable(table) {
+  var tbody = table.querySelector('tbody');
+  var row = tbody.querySelector('.timetable__row');
+  var res = {
+    days: [],
+    cells: []
+  };
+  bodyRows.forEach(function (_ref, i) {
+    var time = _ref.time,
+        data = _ref.data;
+    var header = row.querySelector('.timetable__cell--time');
+    header.textContent = time;
+    var cells = row.querySelectorAll('.timetable__cell--data');
+    cells.forEach(function (cell, j) {
+      cell.textContent = data[j];
+      cell.dataset.day = j;
+      cell.dataset.time = i;
+    });
+    tbody.appendChild(row);
+    row = row.cloneNode(true);
+  });
+  return res;
+};
 
 var activateTimetable = function activateTimetable() {
   var timetable = document.querySelector('.timetable');
   if (!timetable) return;
   var table = timetable.querySelector('.timetable__table');
+
+  var _generateTable = generateTable(table),
+      days = _generateTable.days,
+      cells = _generateTable.cells;
+
   var toggleButtons = timetable.querySelectorAll('.timetable__toggle');
-  console.log(toggleButtons);
 
   var toggleHeader = function toggleHeader(event) {
-    console.log(event.target.dataset);
     Object(_utils_utils__WEBPACK_IMPORTED_MODULE_2__["setClass"])(table, 'timetable__table--header-visible', event.target.dataset.type === 'show');
   };
 
   toggleButtons.forEach(function (button) {
-    console.log(button);
     button.addEventListener('click', toggleHeader);
   });
 };

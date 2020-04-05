@@ -63,104 +63,24 @@
                 </tr>
               </thead>
               <tbody>
+                <!-- Не использовал template, потому что полифилл для IE
+                 по каким-то причинам не видит tr, th, td -->
                 <tr class="timetable__row">
-                  <th scope="row" class="timetable__cell timetable__cell--time">
-                    08:00
-                  </th>
-                  <td class="timetable__cell timetable__cell--data">
-                    CrossFit
-                  </td>
-                  <td class="timetable__cell timetable__cell--data">
-                    Aerostretching
-                  </td>
-                  <td class="timetable__cell timetable__cell--data">
-                    Hot Iron
-                  </td>
-                  <td class="timetable__cell timetable__cell--data">Pilates</td>
-                  <td class="timetable__cell timetable__cell--data">
-                    Stretching
-                  </td>
-                  <td class="timetable__cell timetable__cell--data">
-                    Functional
-                  </td>
-                  <td class="timetable__cell timetable__cell--data">
-                    Body Sculpt
-                  </td>
-                </tr>
-                <tr class="timetable__row">
-                  <th scope="row" class="timetable__cell timetable__cell--time">
-                    12:00
-                  </th>
-                  <td class="timetable__cell timetable__cell--data">
-                    Body Sculpt
-                  </td>
-                  <td class="timetable__cell timetable__cell--data">
-                    CrossFit
-                  </td>
-                  <td class="timetable__cell timetable__cell--data">
-                    Aerostretching
-                  </td>
-                  <td class="timetable__cell timetable__cell--data">
-                    Hot Iron
-                  </td>
-                  <td class="timetable__cell timetable__cell--data">Pilates</td>
-                  <td class="timetable__cell timetable__cell--data">
-                    Stretching
-                  </td>
-                  <td class="timetable__cell timetable__cell--data">
-                    Functional
-                  </td>
-                </tr>
-                <tr class="timetable__row">
-                  <th scope="row" class="timetable__cell timetable__cell--time">
-                    18:00
-                  </th>
-                  <td class="timetable__cell timetable__cell--data">
-                    Functional
-                  </td>
-                  <td class="timetable__cell timetable__cell--data">
-                    Body Sculpt
-                  </td>
-                  <td class="timetable__cell timetable__cell--data">
-                    CrossFit
-                  </td>
-                  <td class="timetable__cell timetable__cell--data">
-                    Aerostretching
-                  </td>
-                  <td class="timetable__cell timetable__cell--data">
-                    Hot Iron
-                  </td>
-                  <td class="timetable__cell timetable__cell--data">Pilates</td>
-                  <td class="timetable__cell timetable__cell--data">
-                    Stretching
-                  </td>
-                </tr>
-                <tr class="timetable__row">
-                  <th scope="row" class="timetable__cell timetable__cell--time">
-                    20:00
-                  </th>
-                  <td class="timetable__cell timetable__cell--data">
-                    Stretching
-                  </td>
-                  <td class="timetable__cell timetable__cell--data">
-                    Functional
-                  </td>
-                  <td class="timetable__cell timetable__cell--data">
-                    Body Sculpt
-                  </td>
-                  <td class="timetable__cell timetable__cell--data">
-                    CrossFit
-                  </td>
-                  <td class="timetable__cell timetable__cell--data">
-                    Aerostretching
-                  </td>
-                  <td class="timetable__cell timetable__cell--data">
-                    Hot Iron
-                  </td>
-                  <td class="timetable__cell timetable__cell--data">Pilates</td>
+                  <th
+                    scope="row"
+                    class="timetable__cell timetable__cell--time"
+                  ></th>
+                  <td class="timetable__cell timetable__cell--data"></td>
+                  <td class="timetable__cell timetable__cell--data"></td>
+                  <td class="timetable__cell timetable__cell--data"></td>
+                  <td class="timetable__cell timetable__cell--data"></td>
+                  <td class="timetable__cell timetable__cell--data"></td>
+                  <td class="timetable__cell timetable__cell--data"></td>
+                  <td class="timetable__cell timetable__cell--data"></td>
                 </tr>
               </tbody>
             </table>
+            <template id="timetable__row-template"> </template>
             <div class="timetable__scroll"></div>
             <button
               type="button"
@@ -226,5 +146,6 @@
       <!-- Футер. Конец -->
     </div>
     <script src="js/app.js"></script>
+    <script></script>
   </body>
 </html>
