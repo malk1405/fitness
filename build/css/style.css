@@ -1986,17 +1986,17 @@ ul {
         .contacts-info__text + .contacts-info__label {
           margin-top: 28px; } }
 
-.timetable__row:hover .timetable__cell--time, .timetable__cell--day-hovered, .timetable__cell--data:hover, .timetable__cell--corner, .timetable__cell--day, .timetable__cell--time, .timetable__toggle {
+.timetable__cell--day-hovered, .timetable__cell--time-hovered, .timetable__cell--data:hover, .timetable__cell--corner, .timetable__cell--day, .timetable__cell--time, .timetable__toggle {
   border: 2px solid #102654; }
 
-.timetable__row:hover .timetable__cell--time, .timetable__cell--day-hovered, .timetable__cell--data:hover {
+.timetable__cell--day-hovered, .timetable__cell--time-hovered, .timetable__cell--data:hover {
   border-color: #ed0233;
   color: #ed0233; }
 
 .timetable__cell--corner, .timetable__cell--day, .timetable__cell--time, .timetable__toggle {
   background-color: white; }
 
-.timetable__row:hover .timetable__cell--time, .timetable__cell--day-hovered {
+.timetable__cell--day-hovered, .timetable__cell--time-hovered {
   background-color: #ed0233;
   color: white; }
 

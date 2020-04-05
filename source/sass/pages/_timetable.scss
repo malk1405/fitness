@@ -13,7 +13,7 @@
   background-color: white;
 }
 
-%th--covered {
+%th--hovered {
   @extend %cell--hovered;
   background-color: #ed0233;
   color: white;
@@ -106,10 +106,6 @@
     }
   }
 
-  &__row:hover &__cell--time {
-    @extend %th--covered;
-  }
-
   &__cell {
     align-items: center;
     display: flex;
@@ -162,7 +158,7 @@
 
     &--day {
       &-hovered {
-        @extend %th--covered;
+        @extend %th--hovered;
       }
 
       @media screen and (max-width: 767px) {
@@ -183,6 +179,10 @@
     }
 
     &--time {
+      &-hovered {
+        @extend %th--hovered;
+      }
+
       @media screen and (max-width: 767px) {
         order: -5;
       }

@@ -94,8 +94,9 @@ const activateTimetable = () => {
   if (!timetable) return;
 
   const table = timetable.querySelector('.timetable__table');
-  const { days, cells, tbody, thead } = generateTable(table);
+  const { days, times, cells, tbody, thead } = generateTable(table);
   let selectedDay = 0;
+  let isHeaderOpen = false;
 
   const toggleButtons = timetable.querySelectorAll('.timetable__toggle');
 
@@ -116,16 +117,35 @@ const activateTimetable = () => {
   thead.addEventListener('click', selectDay);
 
   const toggleHeader = (event) => {
-    setClass(
-      table,
-      'timetable__table--header-visible',
-      event.target.dataset.type === 'show'
-    );
+    isHeaderOpen = event.target.dataset.type === 'show';
+    setClass(table, 'timetable__table--header-visible', isHeaderOpen);
   };
 
   thead.addEventListener('click', toggleHeader);
   toggleButtons.forEach((button) => {
     button.addEventListener('click', toggleHeader);
+  });
+
+  const onMouse = (event, force) => {
+    const { day, time } = event.target.dataset;
+    if (!day || !time) return;
+    const isMobile = window.matchMedia('(max-width: 767px)').matches;
+
+    setClass(days[day], 'timetable__cell--day-hovered', force && !isMobile);
+
+    setClass(
+      times[time],
+      'timetable__cell--time-hovered',
+      force && !(isMobile && isHeaderOpen)
+    );
+  };
+
+  tbody.addEventListener('mouseover', (event) => {
+    onMouse(event, true);
+  });
+
+  tbody.addEventListener('mouseout', (event) => {
+    onMouse(event, false);
   });
 };
 
