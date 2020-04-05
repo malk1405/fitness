@@ -1986,6 +1986,20 @@ ul {
         .contacts-info__text + .contacts-info__label {
           margin-top: 28px; } }
 
+.timetable__row:hover .timetable__cell--time, .timetable__cell--day-hovered, .timetable__cell--data:hover, .timetable__cell--corner, .timetable__cell--day, .timetable__cell--time, .timetable__toggle {
+  border: 2px solid #102654; }
+
+.timetable__row:hover .timetable__cell--time, .timetable__cell--day-hovered, .timetable__cell--data:hover {
+  border-color: #ed0233;
+  color: #ed0233; }
+
+.timetable__cell--corner, .timetable__cell--day, .timetable__cell--time, .timetable__toggle {
+  background-color: white; }
+
+.timetable__row:hover .timetable__cell--time, .timetable__cell--day-hovered {
+  background-color: #ed0233;
+  color: white; }
+
 .timetable {
   margin: 120px 0; }
   @media screen and (max-width: 1365px) {
@@ -2071,8 +2085,6 @@ ul {
         width: 222px; } }
     .timetable__cell:not(:last-child) {
       margin-right: 8px; }
-    .timetable__cell--corner, .timetable__cell--day, .timetable__cell--time {
-      background-color: white; }
     .timetable__cell--corner, .timetable__cell--time {
       width: 65px; }
       @media screen and (max-width: 1365px) {
@@ -2093,13 +2105,18 @@ ul {
       .timetable__cell--day {
         margin-bottom: -2px;
         margin-left: 68px;
-        width: 173px; } }
+        width: 173px; }
+        .timetable__cell--day-selected {
+          -webkit-box-ordinal-group: 0;
+              -ms-flex-order: -1;
+                  order: -1; }
+        .timetable__cell--day:not(.timetable__cell--day-selected):hover {
+          background-color: #102654;
+          color: white;
+          cursor: pointer; } }
     .timetable__cell--data {
       background-color: #f8f9fc; }
-  .timetable__cell--day, .timetable__cell--time, .timetable__toggle {
-    border: 2px solid #102654; }
   .timetable__toggle {
-    background-color: white;
     color: transparent;
     display: none;
     position: absolute;
@@ -2107,6 +2124,8 @@ ul {
     top: 0;
     width: 51px;
     z-index: 2; }
+    .timetable__toggle:hover {
+      cursor: pointer; }
     @media screen and (max-width: 767px) {
       .timetable__toggle {
         display: block; } }
@@ -2124,15 +2143,21 @@ ul {
       -webkit-transform: translateY(-5px) rotate(-45deg);
               transform: translateY(-5px) rotate(-45deg);
       width: 14px; }
+    .timetable__toggle--hide {
+      display: none; }
+      .timetable__toggle--hide::before {
+        -webkit-transform: translateY(-19px) rotate(-225deg);
+                transform: translateY(-19px) rotate(-225deg); }
   @media screen and (max-width: 767px) {
     .timetable__table--header-visible .timetable__row--head {
       overflow: visible; }
     .timetable__table--header-visible .timetable__cell--data,
     .timetable__table--header-visible .timetable__cell--time {
       opacity: 0.2; }
-    .timetable__table--header-visible ~ .timetable__toggle::before {
-      -webkit-transform: translateY(-19px) rotate(-225deg);
-              transform: translateY(-19px) rotate(-225deg); } }
+    .timetable__table--header-visible ~ .timetable__toggle--show {
+      display: none; }
+    .timetable__table--header-visible ~ .timetable__toggle--hide {
+      display: block; } }
   .timetable__scroll {
     display: none; }
     @media screen and (max-width: 1365px) {
