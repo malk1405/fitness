@@ -3880,11 +3880,13 @@ var activateTimetable = function activateTimetable() {
 
   var _generateTable = generateTable(table),
       days = _generateTable.days,
+      times = _generateTable.times,
       cells = _generateTable.cells,
       tbody = _generateTable.tbody,
       thead = _generateTable.thead;
 
   var selectedDay = 0;
+  var isHeaderOpen = false;
   var toggleButtons = timetable.querySelectorAll('.timetable__toggle');
 
   var selectDay = function selectDay(event) {
@@ -3898,12 +3900,30 @@ var activateTimetable = function activateTimetable() {
   thead.addEventListener('click', selectDay);
 
   var toggleHeader = function toggleHeader(event) {
-    Object(_utils_utils__WEBPACK_IMPORTED_MODULE_4__["setClass"])(table, 'timetable__table--header-visible', event.target.dataset.type === 'show');
+    isHeaderOpen = event.target.dataset.type === 'show';
+    Object(_utils_utils__WEBPACK_IMPORTED_MODULE_4__["setClass"])(table, 'timetable__table--header-visible', isHeaderOpen);
   };
 
   thead.addEventListener('click', toggleHeader);
   toggleButtons.forEach(function (button) {
     button.addEventListener('click', toggleHeader);
+  });
+
+  var onMouse = function onMouse(event, force) {
+    var _event$target$dataset = event.target.dataset,
+        day = _event$target$dataset.day,
+        time = _event$target$dataset.time;
+    if (!day || !time) return;
+    var isMobile = window.matchMedia('(max-width: 767px)').matches;
+    Object(_utils_utils__WEBPACK_IMPORTED_MODULE_4__["setClass"])(days[day], 'timetable__cell--day-hovered', force && !isMobile);
+    Object(_utils_utils__WEBPACK_IMPORTED_MODULE_4__["setClass"])(times[time], 'timetable__cell--time-hovered', force && !(isMobile && isHeaderOpen));
+  };
+
+  tbody.addEventListener('mouseover', function (event) {
+    onMouse(event, true);
+  });
+  tbody.addEventListener('mouseout', function (event) {
+    onMouse(event, false);
   });
 };
 
