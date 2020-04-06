@@ -93,9 +93,20 @@
             </div>
             <div class="gym__media">
               <div class="gym__photo">
-                <img src="img/gym-lg.jpg" alt="Фото зала" class="img-lg" />
-                <img src="img/gym-md.jpg" alt="Фото зала" class="img-md" />
-                <img src="img/gym-sm.jpg" alt="Фото зала" class="img-sm" />
+                <picture>
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="img/gym-sm.jpg"
+                    sizes="660px"
+                  />
+                  <source
+                    media="(max-width: 1365px)"
+                    srcset="img/gym-md.jpg"
+                    sizes="678px"
+                  />
+                  <source srcset="img/gym-lg.jpg" sizes="320px" />
+                  <img src="img/gym-lg.jpg" alt="Фото зала" />
+                </picture>
               </div>
               <div class="gym__video">
                 <video controls poster="img/video.png">

@@ -494,24 +494,6 @@ ul {
     .section-header {
       font-size: 32px; } }
 
-.img-lg, .img-md, .img-sm {
-  line-height: 0; }
-
-.img-md, .img-sm {
-  display: none; }
-
-@media screen and (max-width: 1365px) {
-  .img-lg {
-    display: none; }
-  .img-md {
-    display: inline-block; } }
-
-@media screen and (max-width: 767px) {
-  .img-md {
-    display: none; }
-  .img-sm {
-    display: inline-block; } }
-
 .body-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -791,11 +773,12 @@ ul {
 .fitness__buy {
   border: 5px solid white;
   color: white;
-  display: inline-block;
+  display: block;
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 0.5px;
   line-height: 53px;
+  margin-left: auto;
   margin-top: 52px;
   text-align: center;
   text-transform: uppercase;
