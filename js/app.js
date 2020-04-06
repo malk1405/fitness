@@ -20059,6 +20059,8 @@ function createSlider(className, nums) {
     cards.forEach(function (card, i) {
       Object(_utils_utils_js__WEBPACK_IMPORTED_MODULE_15__["setClass"])(card, name, i < min);
     });
+    prevBtn.disabled = index < currentNum;
+    nextBtn.disabled = index + currentNum >= cards.length;
   };
 
   var refresh = function refresh() {
