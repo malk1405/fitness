@@ -3,86 +3,90 @@
   display: flex;
   position: relative;
 
-  &-arrow {
-    &__prev,
-    &__next {
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-      height: 34px;
-      min-width: 18px;
-      padding: 0;
-      position: absolute;
-      outline: none;
-      transform: translateY(-50%);
-      top: 50%;
+  &__arrow {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: 34px;
+    min-width: 18px;
+    padding: 0;
+    position: absolute;
+    outline: none;
+    transform: translateY(-50%);
+    top: 50%;
 
-      @media screen and (max-width: 1365px) {
-        position: relative;
-        top: 0;
-        left: 0;
-        right: 0;
-        transform: none;
-      }
+    @media screen and (max-width: 1365px) {
+      position: relative;
+      top: 0;
+      left: 0;
+      right: 0;
+      transform: none;
+    }
+
+    @media screen and (max-width: 767px) {
+      height: 20px;
+      min-width: 11px;
+    }
+
+    &::before {
+      border-radius: 50px;
+      content: "";
+      display: block;
+      height: 100%;
+      left: 50%;
+      position: absolute;
+      top: 0;
+      width: 34px;
+      z-index: -1;
 
       @media screen and (max-width: 767px) {
-        height: 20px;
-        min-width: 11px;
-      }
-
-      &::before {
-        border-radius: 50px;
-        content: "";
-        display: block;
-        height: 100%;
-        left: 50%;
-        position: absolute;
-        top: 0;
-        width: 34px;
-        z-index: -1;
-
-        @media screen and (max-width: 767px) {
-          width: 20px;
-        }
-      }
-
-      &:hover {
-        &::before {
-          box-shadow: 0 0 10px $primary;
-        }
-      }
-
-      & img {
-        height: 100%;
-        width: 100%;
+        width: 20px;
       }
     }
 
-    &__prev {
+    &:hover {
+      &::before {
+        box-shadow: 0 0 10px $primary;
+      }
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: #eee;
+      opacity: 0.2;
+
+      &::before {
+        background-color: #eee;
+        box-shadow: none;
+      }
+    }
+
+    & img {
+      height: 100%;
+      width: 100%;
+    }
+
+    &--prev {
       left: -56px;
 
       @media screen and (max-width: 1365px) {
         left: 0;
       }
 
-      &:hover {
-        &::before {
-          transform: translateX(-45%) scale(1.5);
-        }
+      &::before {
+        transform: translateX(-45%) scale(1.5);
       }
     }
 
-    &__next {
+    &--next {
       right: -56px;
 
       @media screen and (max-width: 1365px) {
         right: 0;
       }
 
-      &:hover {
-        &::before {
-          transform: translateX(-55%) scale(1.5);
-        }
+      &::before {
+        transform: translateX(-55%) scale(1.5);
       }
     }
   }

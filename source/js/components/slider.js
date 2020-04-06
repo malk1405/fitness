@@ -43,6 +43,9 @@ function createSlider(className, nums) {
     cards.forEach((card, i) => {
       setClass(card, name, i < min);
     });
+
+    prevBtn.disabled = index < currentNum;
+    nextBtn.disabled = index + currentNum >= cards.length;
   };
 
   const refresh = () => {
