@@ -2000,6 +2000,16 @@ ul {
   background-color: #ed0233;
   color: white; }
 
+@media screen and (max-width: 1365px) {
+  .timetable__table, .timetable__scroll-slider {
+    -webkit-transition: margin 0.3s ease-out;
+    transition: margin 0.3s ease-out; } }
+
+@media screen and (max-width: 767px) {
+  .timetable__table, .timetable__scroll-slider {
+    -webkit-transition: none;
+    transition: none; } }
+
 .timetable {
   margin: 120px 0; }
   @media screen and (max-width: 1365px) {
@@ -2173,13 +2183,9 @@ ul {
         height: 4px;
         margin-top: 4px;
         position: relative; }
-        .timetable__scroll::before {
+        .timetable__scroll-slider {
           background-color: #ed0233;
-          content: "";
-          display: block;
           height: 100%;
-          position: absolute;
-          top: 0;
           width: 50%; } }
     @media screen and (max-width: 767px) {
       .timetable__scroll {

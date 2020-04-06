@@ -9,9 +9,6 @@
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
-    <p style="color: red; position: absolute; font-weight: bold; top: 150px;">
-      *Из интерактива не реализована прокрутка расписания на планшетной версии
-    </p>
     <div class="body-wrapper">
       <div class="top-container">
         <header class="header">
@@ -81,7 +78,9 @@
               </tbody>
             </table>
             <template id="timetable__row-template"> </template>
-            <div class="timetable__scroll"></div>
+            <div class="timetable__scroll">
+              <div class="timetable__scroll-slider"></div>
+            </div>
             <button
               type="button"
               class="timetable__toggle timetable__toggle--show"

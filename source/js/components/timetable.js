@@ -1,4 +1,6 @@
 import { setClass } from '../utils/utils';
+import { isMobile, isTablet } from '../utils/media';
+import { setTimeout } from 'core-js';
 
 const bodyRows = [
   {
@@ -106,7 +108,6 @@ const activateTimetable = () => {
 
   const selectDay = (event) => {
     const targetDay = event.target.dataset.day;
-    console.log(targetDay);
     if (!targetDay) return;
 
     swapClass(
@@ -133,14 +134,13 @@ const activateTimetable = () => {
   const onMouse = (event, force) => {
     const { day, time } = event.target.dataset;
     if (!day || !time) return;
-    const isMobile = window.matchMedia('(max-width: 767px)').matches;
 
-    setClass(days[day], 'timetable__cell--day-hovered', force && !isMobile);
+    setClass(days[day], 'timetable__cell--day-hovered', force && !isMobile());
 
     setClass(
       times[time],
       'timetable__cell--time-hovered',
-      force && !(isMobile && isHeaderOpen)
+      force && !(isMobile() && isHeaderOpen)
     );
   };
 
@@ -152,7 +152,9 @@ const activateTimetable = () => {
     onMouse(event, false);
   });
 
+  let isDragging = false;
   const selectCell = (event) => {
+    if (isDragging) return;
     const { day, time } = event.target.dataset;
     if (!day || !time) return;
     const cell = event.target;
@@ -163,6 +165,88 @@ const activateTimetable = () => {
   };
 
   tbody.addEventListener('click', selectCell);
+
+  const slider = document.querySelector('.timetable__scroll-slider');
+  const cellWidth = 146;
+  const margin = 8;
+  const numOfCells = 3;
+  const maxMargin = numOfCells * (margin + cellWidth);
+
+  const pos = {
+    right: 'r',
+    equal: 'e',
+    left: 'l',
+  };
+  const drag = {
+    x: 0,
+    isDragging: false,
+    move: pos.equal,
+    margin: 0,
+    currentMargin: 0,
+  };
+
+  const setMargin = (margin) => {
+    table.style.marginLeft = `${margin}px`;
+
+    slider.style.marginLeft = `${Math.round((-50 * margin) / maxMargin)}%`;
+
+    for (let el of [table, slider]) {
+      el.style.transition = drag.isDragging ? 'none' : '';
+    }
+  };
+
+  window.addEventListener('resize', () => {
+    if (isTablet()) {
+      setMargin(drag.margin);
+      return;
+    }
+
+    setMargin(0);
+    drag.isDragging = false;
+    isDragging = false;
+  });
+
+  tbody.addEventListener('mousedown', (e) => {
+    if (!isTablet()) return;
+    drag.x = e.clientX;
+    drag.isDragging = true;
+  });
+
+  tbody.addEventListener('mousemove', (e) => {
+    if (!drag.isDragging) return;
+    const offset = e.clientX - drag.x;
+    if (Math.abs(offset) < 1) return;
+
+    isDragging = true;
+
+    let margin;
+
+    margin = drag.margin + offset;
+    margin = Math.max(margin, -maxMargin);
+    margin = Math.min(margin, 0);
+
+    drag.currentMargin = margin;
+    setMargin(margin);
+  });
+
+  window.addEventListener('mouseup', (e) => {
+    if (!drag.isDragging) return;
+
+    drag.isDragging = false;
+
+    setTimeout(() => {
+      isDragging = false;
+    }, 0);
+
+    if (drag.margin === drag.currentMargin) return;
+
+    drag.margin = drag.currentMargin < drag.margin ? -maxMargin : 0;
+
+    drag.currentMargin = drag.margin;
+
+    setMargin(drag.margin);
+    table.style.transition = '';
+  });
 };
 
 export default activateTimetable;
