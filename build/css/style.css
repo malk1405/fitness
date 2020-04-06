@@ -1350,14 +1350,14 @@ ul {
     .trainers__card:hover .trainers-card__info {
       opacity: 1;
       height: auto; }
-  .trainers__card--hidden-lg {
+  .trainers__card--hidden {
     margin-left: -300px; }
-  @media screen and (max-width: 1365px) {
-    .trainers__card--hidden-md {
-      margin-left: -298px; } }
-  @media screen and (max-width: 767px) {
-    .trainers__card--hidden-sm {
-      margin-left: -246px; } }
+    @media screen and (max-width: 1365px) {
+      .trainers__card--hidden {
+        margin-left: -298px; } }
+    @media screen and (max-width: 767px) {
+      .trainers__card--hidden {
+        margin-left: -246px; } }
 
 .trainers-card__name {
   font-size: 18px;
@@ -1800,7 +1800,7 @@ ul {
   @media screen and (max-width: 767px) {
     .reviews__card {
       padding: 44px 18px; } }
-  .reviews__card--hidden-lg {
+  .reviews__card--hidden {
     margin: 0;
     margin-left: -100%; }
 

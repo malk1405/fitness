@@ -1,11 +1,17 @@
 import sizes from './sizes';
 
+export const matches = (size) => {
+  if (size === Infinity) return true;
+
+  return window.matchMedia(`(max-width: ${size}px)`).matches;
+};
+
 export const isMobile = () => {
-  return window.matchMedia(`(max-width: ${sizes.sm}px)`).matches;
+  return matches(sizes.sm);
 };
 
 export const isTablet = () => {
-  return !isMobile() && window.matchMedia(`(max-width: ${sizes.md}px)`).matches;
+  return !isMobile() && matches(sizes.md);
 };
 
 export const isDesktop = () => {

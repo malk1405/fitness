@@ -1,15 +1,20 @@
 'use strict';
 
 import { setClass } from '../utils/utils.js';
+import { matches } from '../utils/media';
 import sizes from '../utils/sizes';
 
 const createConfig = (sizes, nums) => {
   const res = {};
-  Object.keys(nums).forEach(el => {
+  Object.keys(nums).forEach((el) => {
     if (sizes[el]) res[el] = { maxWidth: sizes[el], num: nums[el] };
   });
   return res;
 };
+
+function findMin(index, size) {
+  return Math.floor(index / size) * size;
+}
 
 function createSlider(className, nums) {
   const cards = document.querySelectorAll(`.${className}__card`);
@@ -21,54 +26,56 @@ function createSlider(className, nums) {
   const WINDOW_SIZE = createConfig(sizes, nums);
   let index = 0;
 
-  function findMin(index, size) {
-    return Math.floor(index / size) * size;
-  }
-
-  function getWindowSize() {
+  function getNum() {
     for (let el of Object.values(WINDOW_SIZE).sort(
       (a, b) => a.maxWidth - b.maxWidth
     )) {
-      if (window.innerWidth <= el.maxWidth) return el.num;
+      if (matches(el.maxWidth)) return el.num;
     }
   }
 
-  function display(prefix) {
-    const name = `${className}__card--hidden-${prefix}`;
-    const min = findMin(index, WINDOW_SIZE[prefix].num);
+  let currentNum;
+
+  const display = () => {
+    const name = `${className}__card--hidden`;
+    const min = findMin(index, currentNum);
 
     cards.forEach((card, i) => {
       setClass(card, name, i < min);
     });
-  }
+  };
 
-  function displayAll() {
-    Object.keys(WINDOW_SIZE).forEach(size => {
-      display(size);
-    });
-  }
+  const refresh = () => {
+    const newNum = getNum();
+    if (newNum === currentNum) return;
+
+    currentNum = newNum;
+    display();
+  };
+
+  refresh();
+  window.addEventListener('resize', refresh);
 
   return {
     activate() {
-      prevBtn.addEventListener('click', function() {
-        const newIndex = index - getWindowSize();
+      prevBtn.addEventListener('click', function () {
+        const newIndex = index - currentNum;
 
         if (newIndex < 0) return;
 
         index = newIndex;
-        displayAll();
+        display();
       });
 
-      nextBtn.addEventListener('click', function() {
-        const size = getWindowSize();
-        const newIndex = findMin(index + size, size);
+      nextBtn.addEventListener('click', function () {
+        const newIndex = findMin(index + currentNum, currentNum);
 
         if (newIndex >= cards.length) return;
 
         index = newIndex;
-        displayAll();
+        display();
       });
-    }
+    },
   };
 }
 

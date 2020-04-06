@@ -740,20 +740,14 @@
     }
 
     &--hidden {
-      &-lg {
-        margin-left: -300px;
+      margin-left: -300px;
+
+      @media screen and (max-width: 1365px) {
+        margin-left: -298px;
       }
 
-      &-md {
-        @media screen and (max-width: 1365px) {
-          margin-left: -298px;
-        }
-      }
-
-      &-sm {
-        @media screen and (max-width: 767px) {
-          margin-left: -246px;
-        }
+      @media screen and (max-width: 767px) {
+        margin-left: -246px;
       }
     }
   }
@@ -1276,7 +1270,7 @@
       padding: 44px 18px;
     }
 
-    &--hidden-lg {
+    &--hidden {
       margin: 0;
       margin-left: -100%;
     }
