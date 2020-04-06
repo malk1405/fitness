@@ -1,3 +1,5 @@
 import picturefill from 'picturefill';
 
-picturefill();
+(function vendors() {
+  picturefill();
+})();

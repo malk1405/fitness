@@ -5,7 +5,7 @@ import activateTabs from './components/tabs';
 import activateForm from './components/form';
 import activateTimetable from './components/timetable';
 
-function app() {
+(function app() {
   const trainersSlider = createSlider('trainers', { lg: 4, md: 2, sm: 1 });
   const reviewsSlider = createSlider('reviews', { lg: 1 });
 
@@ -14,6 +14,4 @@ function app() {
   reviewsSlider.activate();
   activateForm();
   activateTimetable();
-}
-
-app();
+})();
