@@ -1,6 +1,5 @@
 import { setClass } from '../utils/utils';
 import { isMobile, isTablet } from '../utils/media';
-import { setTimeout } from 'core-js';
 
 const bodyRows = [
   {
