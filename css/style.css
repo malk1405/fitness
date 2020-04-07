@@ -1392,6 +1392,7 @@ ul {
       width: 6px; }
 
 .trainers-card__photo {
+  background-color: #102654;
   height: 100%;
   left: 0;
   position: absolute;
@@ -1804,12 +1805,13 @@ ul {
       line-height: 1.5; } }
 
 .reviews__photo {
-  border-radius: 50%;
   height: 80px;
   left: 62px;
   position: absolute;
   top: 62px;
   width: 80px; }
+  .reviews__photo img {
+    border-radius: 50%; }
   @media screen and (max-width: 767px) {
     .reviews__photo {
       height: 68px;
