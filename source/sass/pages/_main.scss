@@ -806,6 +806,7 @@
     }
 
     &__photo {
+      background-color: $primary;
       height: 100%;
       left: 0;
       position: absolute;
@@ -1288,12 +1289,15 @@
   }
 
   &__photo {
-    border-radius: 50%;
     height: 80px;
     left: 62px;
     position: absolute;
     top: 62px;
     width: 80px;
+
+    img {
+      border-radius: 50%;
+    }
 
     @media screen and (max-width: 767px) {
       height: 68px;
