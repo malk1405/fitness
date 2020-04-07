@@ -1464,7 +1464,8 @@ picture img {
       .advantages-features {
         height: auto;
         margin-top: 42px;
-        width: 768px; }
+        max-width: 768px;
+        width: 100%; }
         .advantages-features::before, .advantages-features::after {
           display: none; } }
     @media screen and (max-width: 767px) {
