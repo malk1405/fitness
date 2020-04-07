@@ -56,16 +56,15 @@
 
     &:disabled {
       cursor: not-allowed;
-      background-color: #eee;
-      opacity: 0.2;
+      background-color: #f1f1f1;
 
       &::before {
-        background-color: #eee;
+        background-color: #f1f1f1;
         box-shadow: none;
       }
     }
 
-    picture {
+    .sprite {
       @extend %slider-button-container;
     }
 
@@ -75,9 +74,16 @@
       @media screen and (max-width: 1365px) {
         left: 0;
       }
-
       &::before {
         transform: translateX(-45%) scale(1.5);
+      }
+
+      .sprite {
+        background-position: -33px -5px;
+
+        @media screen and (max-width: 767px) {
+          background-position: -27px -5px;
+        }
       }
     }
 
@@ -90,6 +96,10 @@
 
       &::before {
         transform: translateX(-55%) scale(1.5);
+      }
+
+      .sprite {
+        background-position: -5px -5px;
       }
     }
   }

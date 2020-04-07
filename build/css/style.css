@@ -371,16 +371,32 @@ picture img {
   display: block; }
 
 .logo {
+  background-position: -83px -5px;
   height: 20px;
   width: 87px; }
   @media screen and (max-width: 1365px) {
     .logo {
+      background-position: -95px -35px;
       height: 18px;
       width: 80px; } }
   @media screen and (max-width: 767px) {
     .logo {
+      background-position: -73px -5px;
       height: 16px;
       width: 67px; } }
+
+.sprite {
+  background-image: url("../img/sprite-lg.png");
+  background-repeat: no-repeat;
+  display: block;
+  position: relative; }
+  @media screen and (max-width: 767px) {
+    .sprite {
+      background-image: url("../img/sprite-sm.png"); } }
+  .sprite picture {
+    left: 0;
+    position: absolute;
+    top: 0; }
 
 .container {
   height: 100%;
@@ -394,11 +410,11 @@ picture img {
     .container {
       width: 290px; } }
 
-.slider__arrow, .slider__arrow picture {
+.slider__arrow, .slider__arrow .sprite {
   height: 34px;
   min-width: 18px; }
   @media screen and (max-width: 767px) {
-    .slider__arrow, .slider__arrow picture {
+    .slider__arrow, .slider__arrow .sprite {
       height: 20px;
       min-width: 11px; } }
 
@@ -446,10 +462,9 @@ picture img {
               box-shadow: 0 0 10px #102654; }
     .slider__arrow:disabled {
       cursor: not-allowed;
-      background-color: #eee;
-      opacity: 0.2; }
+      background-color: #f1f1f1; }
       .slider__arrow:disabled::before {
-        background-color: #eee;
+        background-color: #f1f1f1;
         -webkit-box-shadow: none;
                 box-shadow: none; }
     .slider__arrow--prev {
@@ -460,6 +475,11 @@ picture img {
       .slider__arrow--prev::before {
         -webkit-transform: translateX(-45%) scale(1.5);
                 transform: translateX(-45%) scale(1.5); }
+      .slider__arrow--prev .sprite {
+        background-position: -33px -5px; }
+        @media screen and (max-width: 767px) {
+          .slider__arrow--prev .sprite {
+            background-position: -27px -5px; } }
     .slider__arrow--next {
       right: -56px; }
       @media screen and (max-width: 1365px) {
@@ -468,6 +488,8 @@ picture img {
       .slider__arrow--next::before {
         -webkit-transform: translateX(-55%) scale(1.5);
                 transform: translateX(-55%) scale(1.5); }
+      .slider__arrow--next .sprite {
+        background-position: -5px -5px; }
   .slider__cards {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -528,6 +550,7 @@ picture img {
       background: radial-gradient(circle farthest-corner at 10.03% 80.06%, #003d85, #b80027 80%); } }
 
 .header {
+  color: white;
   font-size: 26px;
   left: 0;
   line-height: 1em;
@@ -556,7 +579,6 @@ picture img {
           justify-content: space-between; }
 
 .header__phone {
-  color: white;
   font-family: "BebasNeue", sans-serif;
   letter-spacing: 0.04em;
   font-weight: bold;
@@ -681,23 +703,29 @@ picture img {
     @media screen and (max-width: 767px) {
       .footer__social-link + .footer__social-link {
         margin-left: 35px; } }
-  .footer__social-link picture {
+  .footer__social-link .sprite {
+    background-position: -61px -39px;
     height: 24px;
     width: 24px; }
     @media screen and (max-width: 767px) {
-      .footer__social-link picture {
+      .footer__social-link .sprite {
+        background-position: -5px -42px;
         height: 27px;
         width: 27px; } }
-  .footer__social-link--fb picture {
+  .footer__social-link--fb .sprite {
+    background-position: -61px -5px;
     width: 12px; }
     @media screen and (max-width: 767px) {
-      .footer__social-link--fb picture {
+      .footer__social-link--fb .sprite {
+        background-position: -49px -5px;
         width: 14px; } }
-  .footer__social-link--vk picture {
+  .footer__social-link--vk .sprite {
+    background-position: -5px -73px;
     height: 13px;
     width: 24px; }
     @media screen and (max-width: 767px) {
-      .footer__social-link--vk picture {
+      .footer__social-link--vk .sprite {
+        background-position: -42px -42px;
         height: 17px;
         width: 32px; } }
   .footer__social-link a,
