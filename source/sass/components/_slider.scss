@@ -1,14 +1,23 @@
+%slider-button-container {
+  height: 34px;
+  min-width: 18px;
+
+  @media screen and (max-width: 767px) {
+    height: 20px;
+    min-width: 11px;
+  }
+}
+
 .slider {
   align-items: center;
   display: flex;
   position: relative;
 
   &__arrow {
+    @extend %slider-button-container;
     background-color: transparent;
     border: none;
     cursor: pointer;
-    height: 34px;
-    min-width: 18px;
     padding: 0;
     position: absolute;
     outline: none;
@@ -21,11 +30,6 @@
       left: 0;
       right: 0;
       transform: none;
-    }
-
-    @media screen and (max-width: 767px) {
-      height: 20px;
-      min-width: 11px;
     }
 
     &::before {
@@ -61,9 +65,8 @@
       }
     }
 
-    & img {
-      height: 100%;
-      width: 100%;
+    picture {
+      @extend %slider-button-container;
     }
 
     &--prev {

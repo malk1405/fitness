@@ -74,6 +74,11 @@
         position: static;
         transform: none;
       }
+
+      .logo {
+        display: inline-block;
+        vertical-align: middle;
+      }
     }
   }
 
@@ -90,8 +95,6 @@
     }
 
     &-link {
-      height: 24px;
-
       & + & {
         margin-left: 25px;
 
@@ -100,16 +103,35 @@
         }
 
         @media screen and (max-width: 767px) {
-          height: 27px;
           margin-left: 35px;
         }
       }
 
-      &--vk {
+      picture {
+        height: 24px;
+        width: 24px;
+
+        @media screen and (max-width: 767px) {
+          height: 27px;
+          width: 27px;
+        }
+      }
+
+      &--fb picture {
+        width: 12px;
+
+        @media screen and (max-width: 767px) {
+          width: 14px;
+        }
+      }
+
+      &--vk picture {
         height: 13px;
+        width: 24px;
 
         @media screen and (max-width: 767px) {
           height: 17px;
+          width: 32px;
         }
       }
 
