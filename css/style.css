@@ -367,6 +367,21 @@ a {
 ul {
   list-style: none; }
 
+picture img {
+  display: block; }
+
+.logo {
+  height: 20px;
+  width: 87px; }
+  @media screen and (max-width: 1365px) {
+    .logo {
+      height: 18px;
+      width: 80px; } }
+  @media screen and (max-width: 767px) {
+    .logo {
+      height: 16px;
+      width: 67px; } }
+
 .container {
   height: 100%;
   margin: 0 auto;
@@ -378,6 +393,14 @@ ul {
   @media screen and (max-width: 767px) {
     .container {
       width: 290px; } }
+
+.slider__arrow, .slider__arrow picture {
+  height: 34px;
+  min-width: 18px; }
+  @media screen and (max-width: 767px) {
+    .slider__arrow, .slider__arrow picture {
+      height: 20px;
+      min-width: 11px; } }
 
 .slider {
   -webkit-box-align: center;
@@ -391,8 +414,6 @@ ul {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    height: 34px;
-    min-width: 18px;
     padding: 0;
     position: absolute;
     outline: none;
@@ -407,10 +428,6 @@ ul {
         right: 0;
         -webkit-transform: none;
                 transform: none; } }
-    @media screen and (max-width: 767px) {
-      .slider__arrow {
-        height: 20px;
-        min-width: 11px; } }
     .slider__arrow::before {
       border-radius: 50px;
       content: "";
@@ -435,9 +452,6 @@ ul {
         background-color: #eee;
         -webkit-box-shadow: none;
                 box-shadow: none; }
-    .slider__arrow img {
-      height: 100%;
-      width: 100%; }
     .slider__arrow--prev {
       left: -56px; }
       @media screen and (max-width: 1365px) {
@@ -556,15 +570,6 @@ ul {
     .header__phone {
       height: 15px; } }
 
-.header__logo {
-  height: 20px; }
-  @media screen and (max-width: 1365px) {
-    .header__logo {
-      height: 19px; } }
-  @media screen and (max-width: 767px) {
-    .header__logo {
-      height: 15px; } }
-
 .footer {
   background-color: #030a1a;
   margin-top: auto; }
@@ -649,6 +654,9 @@ ul {
           position: static;
           -webkit-transform: none;
                   transform: none; } }
+      .footer__link--logo .logo {
+        display: inline-block;
+        vertical-align: middle; }
   .footer__social-links {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -665,26 +673,37 @@ ul {
         -webkit-box-pack: start;
             -ms-flex-pack: start;
                 justify-content: flex-start; } }
-  .footer__social-link {
-    height: 24px; }
-    .footer__social-link + .footer__social-link {
-      margin-left: 25px; }
-      @media screen and (max-width: 1365px) {
-        .footer__social-link + .footer__social-link {
-          margin-left: 20px; } }
-      @media screen and (max-width: 767px) {
-        .footer__social-link + .footer__social-link {
-          height: 27px;
-          margin-left: 35px; } }
-    .footer__social-link--vk {
-      height: 13px; }
-      @media screen and (max-width: 767px) {
-        .footer__social-link--vk {
-          height: 17px; } }
-    .footer__social-link a,
-    .footer__social-link img {
-      display: block;
-      height: 100%; }
+  .footer__social-link + .footer__social-link {
+    margin-left: 25px; }
+    @media screen and (max-width: 1365px) {
+      .footer__social-link + .footer__social-link {
+        margin-left: 20px; } }
+    @media screen and (max-width: 767px) {
+      .footer__social-link + .footer__social-link {
+        margin-left: 35px; } }
+  .footer__social-link picture {
+    height: 24px;
+    width: 24px; }
+    @media screen and (max-width: 767px) {
+      .footer__social-link picture {
+        height: 27px;
+        width: 27px; } }
+  .footer__social-link--fb picture {
+    width: 12px; }
+    @media screen and (max-width: 767px) {
+      .footer__social-link--fb picture {
+        width: 14px; } }
+  .footer__social-link--vk picture {
+    height: 13px;
+    width: 24px; }
+    @media screen and (max-width: 767px) {
+      .footer__social-link--vk picture {
+        height: 17px;
+        width: 32px; } }
+  .footer__social-link a,
+  .footer__social-link img {
+    display: block;
+    height: 100%; }
 
 .fitness {
   color: white;
