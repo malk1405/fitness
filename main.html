@@ -15,11 +15,14 @@
           <div class="container">
             <div class="header-wrapper">
               <nav class="header__nav">
-                <a><picture class="logo">
-                    <source media="(max-width: 767px)" srcset="img/logo-sm.png">
-                    <source media="(max-width: 1365px)" srcset="img/logo-md.png">
-                    <source srcset="img/logo-lg.png">
-                    <img src="img/logo-lg.png" alt="SuperGym"></picture></a>
+                <a><div class="sprite logo">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/sprite-sm.png">
+                      <source srcset="img/sprite-lg.png">
+                      <img src="img/sprite-lg.png" height="0" width="0" alt="Лого">
+                    </picture>
+                    <span class="visually-hidden">Лого</span>
+                  </div></a>
               </nav>
               <div class="header__contacts">
                 <a href="tel:+8-800-555-55-55" class="header__phone">8-800-555-55-55</a>
@@ -349,10 +352,12 @@
           <h2 class="section-header trainers__header">Тренеры</h2>
           <div class="slider trainers__slider">
             <button type="button" class="slider__arrow slider__arrow--prev trainers__prev" title="Назад">
-              <picture>
-                <source media="(max-width: 767px)" srcset="img/arrow-prev-sm.png">
-                <source srcset="img/arrow-prev-lg.png">
-                <img src="img/arrow-prev-lg.png" alt="prev"></picture>
+              <div class="sprite">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="img/sprite-sm.png">
+                  <source srcset="img/sprite-lg.png">
+                  <img src="img/sprite-lg.png" height="0" width="0" alt="prev"> </picture><span class="visually-hidden">prev</span>
+              </div>
             </button>
             <ul class="slider__cards trainers__cards">
               <li class="trainers__card">
@@ -544,10 +549,12 @@
               </li>
             </ul>
             <button type="button" class="slider__arrow slider__arrow--next trainers__next" title="Вперед">
-              <picture>
-                <source media="(max-width: 767px)" srcset="img/arrow-next-sm.png">
-                <source srcset="img/arrow-next-lg.png">
-                <img src="img/arrow-next-lg.png" alt="next"></picture>
+              <div class="sprite">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="img/sprite-sm.png">
+                  <source srcset="img/sprite-lg.png">
+                  <img src="img/sprite-lg.png" height="0" width="0" alt="next"> </picture><span class="visually-hidden">next</span>
+              </div>
             </button>
           </div>
         </div>
@@ -679,10 +686,12 @@
           <h2 class="section-header reviews__header">Отзывы</h2>
           <div class="slider reviews__slider">
             <button type="button" class="slider__arrow slider__arrow--prev reviews__prev" title="Предыдущий отзыв">
-              <picture>
-                <source media="(max-width: 767px)" srcset="img/arrow-prev-sm.png">
-                <source srcset="img/arrow-prev-lg.png">
-                <img src="img/arrow-prev-lg.png" alt="prev"></picture>
+              <div class="sprite">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="img/sprite-sm.png">
+                  <source srcset="img/sprite-lg.png">
+                  <img src="img/sprite-lg.png" height="0" width="0" alt="prev"> </picture><span class="visually-hidden">prev</span>
+              </div>
             </button>
             <ul class="slider__cards reviews__cards">
               <li class="reviews__card">
@@ -727,10 +736,12 @@
               </li>
             </ul>
             <button type="button" class="slider__arrow slider__arrow--next reviews__next" title="Следующий отзыв">
-              <picture>
-                <source media="(max-width: 767px)" srcset="img/arrow-next-sm.png">
-                <source srcset="img/arrow-next-lg.png">
-                <img src="img/arrow-next-lg.png" alt="next"></picture>
+              <div class="sprite">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="img/sprite-sm.png">
+                  <source srcset="img/sprite-lg.png">
+                  <img src="img/sprite-lg.png" height="0" width="0" alt="next"> </picture><span class="visually-hidden">next</span>
+              </div>
             </button>
           </div>
         </div>
@@ -807,31 +818,46 @@
                 <a href="timetable.html">Расписание</a>
               </li>
               <li class="footer__link footer__link--logo">
-                <a><picture class="logo">
-                    <source media="(max-width: 767px)" srcset="img/logo-sm.png">
-                    <source media="(max-width: 1365px)" srcset="img/logo-md.png">
-                    <source srcset="img/logo-lg.png">
-                    <img src="img/logo-lg.png" alt="SuperGym"></picture></a>
+                <a><div class="sprite logo">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/sprite-sm.png">
+                      <source srcset="img/sprite-lg.png">
+                      <img src="img/sprite-lg.png" height="0" width="0" alt="Лого">
+                    </picture>
+                    <span class="visually-hidden">Лого</span>
+                  </div></a>
               </li>
             </ul>
             <ul class="footer-container__section footer__social-links">
               <li class="footer__social-link footer__social-link--vk">
-                <a href="#" title="ВКонтакте"><picture>
-                    <source media="(max-width: 767px)" srcset="img/footer-link-vk-sm.png">
-                    <source srcset="img/footer-link-vk-lg.png">
-                    <img src="img/footer-link-vk.png" alt="ВК"></picture></a>
+                <a href="#" title="ВКонтакте"><div class="sprite">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/sprite-sm.png">
+                      <source srcset="img/sprite-lg.png">
+                      <img src="img/sprite-lg.png" height="0" width="0" alt="VK">
+                    </picture>
+                    <span class="visually-hidden">VK</span>
+                  </div></a>
               </li>
-              <li class="footer__social-link">
-                <a href="#" title="Instagram"><picture>
-                    <source media="(max-width: 767px)" srcset="img/footer-link-ig-sm.png">
-                    <source srcset="img/footer-link-ig-lg.png">
-                    <img src="img/footer-link-ig.png" alt="IG"></picture></a>
+              <li class="footer__social-link footer__social-link--ig">
+                <a href="#" title="Instagram"><div class="sprite">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/sprite-sm.png">
+                      <source srcset="img/sprite-lg.png">
+                      <img src="img/sprite-lg.png" height="0" width="0" alt="IG">
+                    </picture>
+                    <span class="visually-hidden">IG</span>
+                  </div></a>
               </li>
-              <li class="footer__social-link" title="Facebook">
-                <a href="#"><picture>
-                    <source media="(max-width: 767px)" srcset="img/footer-link-fb-sm.png">
-                    <source srcset="img/footer-link-fb-lg.png">
-                    <img src="img/footer-link-fb.png" alt="FB"></picture></a>
+              <li class="footer__social-link footer__social-link--fb" title="Facebook">
+                <a href="#"><div class="sprite">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/sprite-sm.png">
+                      <source srcset="img/sprite-lg.png">
+                      <img src="img/sprite-lg.png" height="0" width="0" alt="FB">
+                    </picture>
+                    <span class="visually-hidden">FB</span>
+                  </div></a>
               </li>
             </ul>
           </div>
