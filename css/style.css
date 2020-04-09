@@ -838,6 +838,9 @@ picture img {
     .fitness__buy {
       margin-top: 40px;
       width: 100%; } }
+  .fitness__buy:hover {
+    -webkit-box-shadow: 0 0 0 5px #ffffff80;
+            box-shadow: 0 0 0 5px #ffffff80; }
 
 .fitness__banner {
   height: 556px;
@@ -866,6 +869,8 @@ picture img {
   @media screen and (max-width: 1365px) {
     .fitness__social {
       display: none; } }
+  .fitness__social a:hover {
+    text-decoration: underline; }
 
 .section {
   margin-top: 120px; }
