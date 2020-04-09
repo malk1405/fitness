@@ -113,6 +113,10 @@
     margin-top: 40px;
     width: 100%;
   }
+
+  &:hover {
+    box-shadow: 0 0 0 5px #ffffff80;
+  }
 }
 
 .fitness__banner {
@@ -146,6 +150,10 @@
 
   @media screen and (max-width: 1365px) {
     display: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 }
 
