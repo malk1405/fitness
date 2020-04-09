@@ -14,4 +14,8 @@
     height: 16px;
     width: 67px;
   }
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
