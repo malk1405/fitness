@@ -60,7 +60,7 @@ gulp.task('js', () => {
     .pipe(
       webpack({
         entry,
-        mode: 'production',
+        mode: 'development',
         output: {
           filename: '[name].js',
         },
