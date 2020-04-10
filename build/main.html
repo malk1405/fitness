@@ -46,9 +46,26 @@
                 <a href="#abonements" class="fitness__buy">Купить абонемент</a>
               </div>
               <picture class="fitness__banner">
-                <source media="(max-width: 767px)" srcset="img/blank.gif 1w" sizes="1px">
-                <source media="(max-width: 1365px)" srcset="img/main-banner-md.jpg 324w" sizes="324px">
-                <img srcset="img/main-banner-lg.jpg" src="img/main-banner-lg.jpg" alt="Баннер">
+                <!-- Пустая картинка для мобильной версии -->
+                <!-- 1х: 1px; 2x: 1px -->
+                <source media="(max-width: 767px)" srcset="img/blank.gif">
+                <!-- 1х: 324px; 2x: 648px -->
+                <source type="image/webp" media="(max-width: 1365px)" srcset="
+                    img/main-banner@1x-md.webp 1x,
+                    img/main-banner@2x-md.webp 2x
+                  ">
+                <!-- 1х: 500px; 2x: 1000px -->
+                <source type="image/webp" srcset="
+                    img/main-banner@1x-lg.webp 1x,
+                    img/main-banner@2x-lg.webp 2x
+                  ">
+                <!-- 1х: 324px; 2x: 648px -->
+                <source media="(max-width: 1365px)" srcset="
+                    img/main-banner@1x-md.jpg 1x,
+                    img/main-banner@2x-md.jpg 2x
+                  ">
+                <!-- 1х: 500px; 2x: 1000px -->
+                <img src="img/main-banner@1x-lg.jpg" srcset="img/main-banner@2x-lg.jpg 2x" alt="Баннер">
               </picture>
               <div class="fitness__social">
                 <ul>
@@ -84,9 +101,18 @@
             <div class="gym__media">
               <div class="gym__photo">
                 <picture>
-                  <source media="(max-width: 767px)" srcset="img/gym-sm.jpg">
-                  <source media="(max-width: 1365px)" srcset="img/gym-md.jpg">
-                  <img srcset="img/gym-lg.jpg" src="img/gym-lg.jpg" alt="Фото зала">
+                  <!-- 1х: 320px; 2x: 640px -->
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/gym@1x-sm.webp, img/gym@2x-sm.webp 2x">
+                  <!-- 1х: 678px; 2x: 1356px -->
+                  <source type="image/webp" media="(max-width: 1365px)" srcset="img/gym@1x-md.webp, img/gym@2x-md.webp 2x">
+                  <!-- 1х: 660px; 2x: 1320px -->
+                  <source type="image/webp" srcset="img/gym@1x-lg.webp, img/gym@2x-lg.webp 2x">
+                  <!-- 1х: 320px; 2x: 640px -->
+                  <source media="(max-width: 767px)" srcset="img/gym@1x-sm.jpg, img/gym@2x-sm.jpg 2x">
+                  <!-- 1х: 678px; 2x: 1356px -->
+                  <source media="(max-width: 1365px)" srcset="img/gym@1x-md.jpg, img/gym@2x-md.jpg 2x">
+                  <!-- 1х: 660px; 2x: 1320px -->
+                  <img src="img/gym@1x-lg.jpg" srcset="img/gym@2x-lg.jpg 2x" alt="Фото зала">
                 </picture>
               </div>
               <div class="gym__video">
