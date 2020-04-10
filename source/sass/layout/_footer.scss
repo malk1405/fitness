@@ -132,23 +132,19 @@
         }
       }
 
-      &--fb .sprite {
-        background-position: -61px -5px;
+      &--fb {
         width: 12px;
 
         @media screen and (max-width: 767px) {
-          background-position: -49px -5px;
           width: 14px;
         }
       }
 
-      &--vk .sprite {
-        background-position: -5px -73px;
+      &--vk {
         height: 13px;
         width: 24px;
 
         @media screen and (max-width: 767px) {
-          background-position: -42px -42px;
           height: 17px;
           width: 32px;
         }

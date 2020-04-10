@@ -1,16 +1,25 @@
 .sprite {
-  background-image: url("../img/sprite-lg.png");
-  background-repeat: no-repeat;
-  display: block;
-  position: relative;
+  &__svg {
+    display: none;
 
-  @media screen and (max-width: 767px) {
-    background-image: url("../img/sprite-sm.png");
-  }
+    &--lg {
+      display: block;
+    }
 
-  picture {
-    left: 0;
-    position: absolute;
-    top: 0;
+    @media screen and (max-width: 1365px) {
+      display: none;
+
+      &--md {
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      display: none;
+
+      &--sm {
+        display: block;
+      }
+    }
   }
 }

@@ -77,14 +77,6 @@
       &::before {
         transform: translateX(-45%) scale(1.5);
       }
-
-      .sprite {
-        background-position: -33px -5px;
-
-        @media screen and (max-width: 767px) {
-          background-position: -27px -5px;
-        }
-      }
     }
 
     &--next {
@@ -96,10 +88,6 @@
 
       &::before {
         transform: translateX(-55%) scale(1.5);
-      }
-
-      .sprite {
-        background-position: -5px -5px;
       }
     }
   }
