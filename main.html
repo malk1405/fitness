@@ -16,10 +16,16 @@
             <div class="header-wrapper">
               <nav class="header__nav">
                 <a><div class="sprite logo">
-                    <picture>
-                      <source media="(max-width: 767px)" srcset="img/sprite-sm.png">
-                      <img srcset="img/sprite-lg.png" src="img/sprite-lg.png" height="0" width="0" alt="Лого">
-                    </picture>
+                    <svg class="sprite__svg sprite__svg--lg" width="89" height="20">
+                      <use xlink:href="img/sprite.svg#logo-lg"></use>
+                    </svg>
+                    <svg class="sprite__svg sprite__svg--md" width="82" height="18">
+                      <use xlink:href="img/sprite.svg#logo-md"></use>
+                    </svg>
+                    <svg class="sprite__svg sprite__svg--sm" width="68" height="15">
+                      <use xlink:href="img/sprite.svg#logo-sm"></use>
+                    </svg>
+                    <img src="img/sprite.svg" height="0" width="0" alt="Лого">
                     <span class="visually-hidden">Лого</span>
                   </div></a>
               </nav>
@@ -120,21 +126,22 @@
                   Your browser does not support the video tag.
                 </video>
                 <button type="button" class="gym__video-button">
-                  <span class="visually-hidden">Воспроизвести</span><svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="50" cy="50" r="49" stroke="url(#paint0_linear)" stroke-opacity="0.2" stroke-width="2"></circle>
                     <circle cx="50" cy="50" r="36" fill="url(#paint1_linear)"></circle>
                     <path d="M59 49.5L46.25 56.8612L46.25 42.1388L59 49.5Z" fill="white"></path>
                     <defs>
                       <linearGradient id="paint0_linear" x1="19.774" y1="3.00672e-05" x2="105.785" y2="10.6444" gradientUnits="userSpaceOnUse">
-                        <stop offset="0" stop-color="#ED0233"></stop>
+                        <stop stop-color="#ED0233"></stop>
                         <stop offset="1" stop-color="#003EB7"></stop>
                       </linearGradient>
                       <linearGradient id="paint1_linear" x1="14" y1="49.52" x2="54.1858" y2="9.18415" gradientUnits="userSpaceOnUse">
-                        <stop offset="0" stop-color="#003D85"></stop>
+                        <stop stop-color="#003D85"></stop>
                         <stop offset="0.885417" stop-color="#B80027"></stop>
                       </linearGradient>
                     </defs>
                   </svg>
+                  <span class="visually-hidden">Воспроизвести</span>
                 </button>
               </div>
             </div>
@@ -347,11 +354,17 @@
           <h2 class="section-header trainers__header">Тренеры</h2>
           <div class="slider trainers__slider">
             <button type="button" class="slider__arrow slider__arrow--prev trainers__prev" title="Назад">
-              <span class="sprite">
-                <picture>
-                  <source media="(max-width: 767px)" srcset="img/sprite-sm.png">
-                  <img srcset="img/sprite-lg.png" src="img/sprite-lg.png" height="0" width="0" alt="prev"> </picture><span class="visually-hidden">prev</span>
-              </span>
+              <svg class="sprite__svg sprite__svg--lg" width="16" height="32">
+                <use xlink:href="img/sprite.svg#arrow-prev-lg"></use>
+              </svg>
+              <svg class="sprite__svg sprite__svg--md" width="16" height="32">
+                <use xlink:href="img/sprite.svg#arrow-prev-md"></use>
+              </svg>
+              <svg class="sprite__svg sprite__svg--sm" width="10" height="19">
+                <use xlink:href="img/sprite.svg#arrow-prev-sm"></use>
+              </svg>
+              <img src="img/sprite.svg" height="0" width="0" alt="Назад">
+              <span class="visually-hidden">Назад</span>
             </button>
             <ul class="slider__cards trainers__cards">
               <li class="trainers__card trainers-card">
@@ -799,11 +812,17 @@
               </li>
             </ul>
             <button type="button" class="slider__arrow slider__arrow--next trainers__next" title="Вперед">
-              <span class="sprite">
-                <picture>
-                  <source media="(max-width: 767px)" srcset="img/sprite-sm.png">
-                  <img srcset="img/sprite-lg.png" src="img/sprite-lg.png" height="0" width="0" alt="next"> </picture><span class="visually-hidden">next</span>
-              </span>
+              <svg class="sprite__svg sprite__svg--lg" width="16" height="32">
+                <use xlink:href="img/sprite.svg#arrow-next-lg"></use>
+              </svg>
+              <svg class="sprite__svg sprite__svg--md" width="16" height="32">
+                <use xlink:href="img/sprite.svg#arrow-next-md"></use>
+              </svg>
+              <svg class="sprite__svg sprite__svg--sm" width="10" height="19">
+                <use xlink:href="img/sprite.svg#arrow-next-sm"></use>
+              </svg>
+              <img src="img/sprite.svg" height="0" width="0" alt="Вперед">
+              <span class="visually-hidden">Вперед</span>
             </button>
           </div>
         </div>
@@ -935,11 +954,17 @@
           <h2 class="section-header reviews__header">Отзывы</h2>
           <div class="slider reviews__slider">
             <button type="button" class="slider__arrow slider__arrow--prev reviews__prev" title="Предыдущий отзыв">
-              <span class="sprite">
-                <picture>
-                  <source media="(max-width: 767px)" srcset="img/sprite-sm.png">
-                  <img srcset="img/sprite-lg.png" src="img/sprite-lg.png" height="0" width="0" alt="prev"> </picture><span class="visually-hidden">prev</span>
-              </span>
+              <svg class="sprite__svg sprite__svg--lg" width="16" height="32">
+                <use xlink:href="img/sprite.svg#arrow-prev-lg"></use>
+              </svg>
+              <svg class="sprite__svg sprite__svg--md" width="16" height="32">
+                <use xlink:href="img/sprite.svg#arrow-prev-md"></use>
+              </svg>
+              <svg class="sprite__svg sprite__svg--sm" width="10" height="19">
+                <use xlink:href="img/sprite.svg#arrow-prev-sm"></use>
+              </svg>
+              <img src="img/sprite.svg" height="0" width="0" alt="Назад">
+              <span class="visually-hidden">Назад</span>
             </button>
             <ul class="slider__cards reviews__cards">
               <li class="reviews__card">
@@ -1026,11 +1051,17 @@
               </li>
             </ul>
             <button type="button" class="slider__arrow slider__arrow--next reviews__next" title="Следующий отзыв">
-              <span class="sprite">
-                <picture>
-                  <source media="(max-width: 767px)" srcset="img/sprite-sm.png">
-                  <img srcset="img/sprite-lg.png" src="img/sprite-lg.png" height="0" width="0" alt="next"> </picture><span class="visually-hidden">next</span>
-              </span>
+              <svg class="sprite__svg sprite__svg--lg" width="16" height="32">
+                <use xlink:href="img/sprite.svg#arrow-next-lg"></use>
+              </svg>
+              <svg class="sprite__svg sprite__svg--md" width="16" height="32">
+                <use xlink:href="img/sprite.svg#arrow-next-md"></use>
+              </svg>
+              <svg class="sprite__svg sprite__svg--sm" width="10" height="19">
+                <use xlink:href="img/sprite.svg#arrow-next-sm"></use>
+              </svg>
+              <img src="img/sprite.svg" height="0" width="0" alt="Вперед">
+              <span class="visually-hidden">Вперед</span>
             </button>
           </div>
         </div>
@@ -1115,40 +1146,65 @@
                 <a href="timetable.html">Расписание</a>
               </li>
               <li class="footer__link footer__link--logo">
-                <a><div class="sprite logo">
-                    <picture>
-                      <source media="(max-width: 767px)" srcset="img/sprite-sm.png">
-                      <img srcset="img/sprite-lg.png" src="img/sprite-lg.png" height="0" width="0" alt="Лого">
-                    </picture>
+                <a href="main.html" title="На главную"><div class="sprite logo">
+                    <svg class="sprite__svg sprite__svg--lg" width="89" height="20">
+                      <use xlink:href="img/sprite.svg#logo-lg"></use>
+                    </svg>
+                    <svg class="sprite__svg sprite__svg--md" width="82" height="18">
+                      <use xlink:href="img/sprite.svg#logo-md"></use>
+                    </svg>
+                    <svg class="sprite__svg sprite__svg--sm" width="68" height="15">
+                      <use xlink:href="img/sprite.svg#logo-sm"></use>
+                    </svg>
+                    <img src="img/sprite.svg" height="0" width="0" alt="Лого">
                     <span class="visually-hidden">Лого</span>
                   </div></a>
               </li>
             </ul>
+
             <ul class="footer-container__section footer__social-links">
               <li class="footer__social-link footer__social-link--vk">
-                <a href="#" onclick="return false;" title="ВКонтакте"><div class="sprite">
-                    <picture>
-                      <source media="(max-width: 767px)" srcset="img/sprite-sm.png">
-                      <img srcset="img/sprite-lg.png" src="img/sprite-lg.png" height="0" width="0" alt="VK">
-                    </picture>
+                <a href="#" onclick="return false;" title="ВКонтакте"><div class="sprite logo">
+                    <svg class="sprite__svg sprite__svg--lg" width="24" height="13">
+                      <use xlink:href="img/sprite.svg#vk-lg"></use>
+                    </svg>
+                    <svg class="sprite__svg sprite__svg--md" width="24" height="13">
+                      <use xlink:href="img/sprite.svg#vk-md"></use>
+                    </svg>
+                    <svg class="sprite__svg sprite__svg--sm" width="32" height="17">
+                      <use xlink:href="img/sprite.svg#vk-sm"></use>
+                    </svg>
+                    <img src="img/sprite.svg" height="0" width="0" alt="VKontakte">
                     <span class="visually-hidden">VK</span>
                   </div></a>
               </li>
               <li class="footer__social-link footer__social-link--ig">
-                <a href="#" onclick="return false;" title="Instagram"><div class="sprite">
-                    <picture>
-                      <source media="(max-width: 767px)" srcset="img/sprite-sm.png">
-                      <img srcset="img/sprite-lg.png" src="img/sprite-lg.png" height="0" width="0" alt="IG">
-                    </picture>
+                <a href="#" onclick="return false;" title="Instagram"><div class="sprite logo">
+                    <svg class="sprite__svg sprite__svg--lg" width="24" height="24">
+                      <use xlink:href="img/sprite.svg#ig-lg"></use>
+                    </svg>
+                    <svg class="sprite__svg sprite__svg--md" width="24" height="24">
+                      <use xlink:href="img/sprite.svg#ig-md"></use>
+                    </svg>
+                    <svg class="sprite__svg sprite__svg--sm" width="27" height="27">
+                      <use xlink:href="img/sprite.svg#ig-sm"></use>
+                    </svg>
+                    <img src="img/sprite.svg" height="0" width="0" alt="Instagram">
                     <span class="visually-hidden">IG</span>
                   </div></a>
               </li>
               <li class="footer__social-link footer__social-link--fb" title="Facebook">
-                <a href="#" onclick="return false;"><div class="sprite">
-                    <picture>
-                      <source media="(max-width: 767px)" srcset="img/sprite-sm.png">
-                      <img srcset="img/sprite-lg.png" src="img/sprite-lg.png" height="0" width="0" alt="FB">
-                    </picture>
+                <a href="#" onclick="return false;"><div class="sprite logo">
+                    <svg class="sprite__svg sprite__svg--lg" width="12" height="24">
+                      <use xlink:href="img/sprite.svg#fb-lg"></use>
+                    </svg>
+                    <svg class="sprite__svg sprite__svg--md" width="12" height="24">
+                      <use xlink:href="img/sprite.svg#fb-md"></use>
+                    </svg>
+                    <svg class="sprite__svg sprite__svg--sm" width="14" height="27">
+                      <use xlink:href="img/sprite.svg#fb-sm"></use>
+                    </svg>
+                    <img src="img/sprite.svg" height="0" width="0" alt="Facebook">
                     <span class="visually-hidden">FB</span>
                   </div></a>
               </li>

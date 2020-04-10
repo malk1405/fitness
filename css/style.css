@@ -371,35 +371,34 @@ picture img {
   display: block; }
 
 .logo {
-  background-position: -83px -5px;
   height: 20px;
   width: 87px; }
   @media screen and (max-width: 1365px) {
     .logo {
-      background-position: -95px -35px;
       height: 18px;
       width: 80px; } }
   @media screen and (max-width: 767px) {
     .logo {
-      background-position: -73px -5px;
       height: 16px;
       width: 67px; } }
   .logo:hover {
     -webkit-transform: scale(1.1);
             transform: scale(1.1); }
 
-.sprite {
-  background-image: url("../img/sprite-lg.png");
-  background-repeat: no-repeat;
-  display: block;
-  position: relative; }
+.sprite__svg {
+  display: none; }
+  .sprite__svg--lg {
+    display: block; }
+  @media screen and (max-width: 1365px) {
+    .sprite__svg {
+      display: none; }
+      .sprite__svg--md {
+        display: block; } }
   @media screen and (max-width: 767px) {
-    .sprite {
-      background-image: url("../img/sprite-sm.png"); } }
-  .sprite picture {
-    left: 0;
-    position: absolute;
-    top: 0; }
+    .sprite__svg {
+      display: none; }
+      .sprite__svg--sm {
+        display: block; } }
 
 .container {
   height: 100%;
@@ -478,11 +477,6 @@ picture img {
       .slider__arrow--prev::before {
         -webkit-transform: translateX(-45%) scale(1.5);
                 transform: translateX(-45%) scale(1.5); }
-      .slider__arrow--prev .sprite {
-        background-position: -33px -5px; }
-        @media screen and (max-width: 767px) {
-          .slider__arrow--prev .sprite {
-            background-position: -27px -5px; } }
     .slider__arrow--next {
       right: -56px; }
       @media screen and (max-width: 1365px) {
@@ -491,8 +485,6 @@ picture img {
       .slider__arrow--next::before {
         -webkit-transform: translateX(-55%) scale(1.5);
                 transform: translateX(-55%) scale(1.5); }
-      .slider__arrow--next .sprite {
-        background-position: -5px -5px; }
   .slider__cards {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -725,20 +717,16 @@ picture img {
         background-position: -5px -42px;
         height: 27px;
         width: 27px; } }
-  .footer__social-link--fb .sprite {
-    background-position: -61px -5px;
+  .footer__social-link--fb {
     width: 12px; }
     @media screen and (max-width: 767px) {
-      .footer__social-link--fb .sprite {
-        background-position: -49px -5px;
+      .footer__social-link--fb {
         width: 14px; } }
-  .footer__social-link--vk .sprite {
-    background-position: -5px -73px;
+  .footer__social-link--vk {
     height: 13px;
     width: 24px; }
     @media screen and (max-width: 767px) {
-      .footer__social-link--vk .sprite {
-        background-position: -42px -42px;
+      .footer__social-link--vk {
         height: 17px;
         width: 32px; } }
   .footer__social-link a,
