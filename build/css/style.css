@@ -1186,7 +1186,7 @@ picture img {
       .plan__price::before {
         font-size: 80px; } }
 
-.plan__price--value {
+.plan__price-value {
   font-weight: bold; }
 
 .plan__buy {
