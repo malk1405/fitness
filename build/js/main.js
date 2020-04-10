@@ -3697,7 +3697,7 @@ function createSlider(className, nums) {
       Object(_utils_utils_js__WEBPACK_IMPORTED_MODULE_15__["setClass"])(card, name, i < min);
     });
     prevBtn.disabled = index < currentNum;
-    nextBtn.disabled = index + currentNum >= cards.length;
+    nextBtn.disabled = min + currentNum >= cards.length;
   };
 
   var refresh = function refresh() {

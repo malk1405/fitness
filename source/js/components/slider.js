@@ -45,7 +45,7 @@ function createSlider(className, nums) {
     });
 
     prevBtn.disabled = index < currentNum;
-    nextBtn.disabled = index + currentNum >= cards.length;
+    nextBtn.disabled = min + currentNum >= cards.length;
   };
 
   const refresh = () => {
