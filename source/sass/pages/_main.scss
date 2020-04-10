@@ -115,7 +115,8 @@
   }
 
   &:hover {
-    box-shadow: 0 0 0 5px #ffffff80;
+    background-color: white;
+    color: $primary;
   }
 }
 
@@ -153,7 +154,9 @@
   }
 
   a:hover {
+    display: block;
     text-decoration: underline;
+    transform: scale(1.5);
   }
 }
 
@@ -1256,10 +1259,10 @@
     position: relative;
 
     &:hover {
-      transform: translateX(20px) scale(1.5);
+      transform: translateX(5px) scale(1.2);
 
       @media screen and (max-width: 767px) {
-        transform: scale(1.5);
+        transform: scale(1.2);
       }
     }
 
@@ -1483,8 +1486,9 @@
       width: 100%;
 
       &:hover {
+        background-color: white;
+        color: $primary;
         cursor: pointer;
-        transform: scale(1.05);
       }
 
       @media screen and (max-width: 767px) {

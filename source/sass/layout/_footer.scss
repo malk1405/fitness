@@ -52,8 +52,11 @@
     line-height: 1.5;
     margin: 0 20px;
 
-    &:hover {
-      box-shadow: 0 0 10px 10px white;
+    a:hover {
+      display: block;
+      text-decoration: underline;
+      transform: scale(1.2);
+      transform-origin: left;
     }
 
     @media screen and (max-width: 1365px) {
@@ -74,10 +77,6 @@
       position: absolute;
       transform: translateY(-50%);
       top: 50%;
-
-      &:hover {
-        box-shadow: none;
-      }
 
       @media screen and (max-width: 767px) {
         position: static;
