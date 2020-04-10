@@ -400,6 +400,9 @@ picture img {
       .sprite__svg--sm {
         display: block; } }
 
+.sprite img {
+  position: absolute; }
+
 .container {
   height: 100%;
   margin: 0 auto;
@@ -648,9 +651,13 @@ picture img {
     border-radius: 3px;
     line-height: 1.5;
     margin: 0 20px; }
-    .footer__link:hover {
-      -webkit-box-shadow: 0 0 10px 10px white;
-              box-shadow: 0 0 10px 10px white; }
+    .footer__link a:hover {
+      display: block;
+      text-decoration: underline;
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2);
+      -webkit-transform-origin: left;
+              transform-origin: left; }
     @media screen and (max-width: 1365px) {
       .footer__link {
         margin: 0 15px; } }
@@ -670,9 +677,6 @@ picture img {
       -webkit-transform: translateY(-50%);
               transform: translateY(-50%);
       top: 50%; }
-      .footer__link--logo:hover {
-        -webkit-box-shadow: none;
-                box-shadow: none; }
       @media screen and (max-width: 767px) {
         .footer__link--logo {
           position: static;
@@ -840,8 +844,8 @@ picture img {
       margin-top: 40px;
       width: 100%; } }
   .fitness__buy:hover {
-    -webkit-box-shadow: 0 0 0 5px #ffffff80;
-            box-shadow: 0 0 0 5px #ffffff80; }
+    background-color: white;
+    color: #102654; }
 
 .fitness__banner {
   height: 556px;
@@ -871,7 +875,10 @@ picture img {
     .fitness__social {
       display: none; } }
   .fitness__social a:hover {
-    text-decoration: underline; }
+    display: block;
+    text-decoration: underline;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5); }
 
 .section {
   margin-top: 120px; }
@@ -1829,12 +1836,12 @@ picture img {
     text-transform: uppercase;
     position: relative; }
     .sale__info:hover {
-      -webkit-transform: translateX(20px) scale(1.5);
-              transform: translateX(20px) scale(1.5); }
+      -webkit-transform: translateX(5px) scale(1.2);
+              transform: translateX(5px) scale(1.2); }
       @media screen and (max-width: 767px) {
         .sale__info:hover {
-          -webkit-transform: scale(1.5);
-                  transform: scale(1.5); } }
+          -webkit-transform: scale(1.2);
+                  transform: scale(1.2); } }
     .sale__info--main {
       border-color: white;
       font-size: 14px;
@@ -1997,9 +2004,9 @@ picture img {
     text-transform: uppercase;
     width: 100%; }
     .contacts-form__button:hover {
-      cursor: pointer;
-      -webkit-transform: scale(1.05);
-              transform: scale(1.05); }
+      background-color: white;
+      color: #102654;
+      cursor: pointer; }
     @media screen and (max-width: 767px) {
       .contacts-form__button {
         margin-top: 40px; } }
