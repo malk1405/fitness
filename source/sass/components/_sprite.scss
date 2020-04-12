@@ -1,4 +1,6 @@
 .sprite {
+  position: relative;
+
   &__svg {
     display: none;
 
@@ -25,5 +27,6 @@
 
   img {
     position: absolute;
+    top: 0;
   }
 }

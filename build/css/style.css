@@ -385,23 +385,25 @@ picture img {
     -webkit-transform: scale(1.1);
             transform: scale(1.1); }
 
-.sprite__svg {
-  display: none; }
-  .sprite__svg--lg {
-    display: block; }
-  @media screen and (max-width: 1365px) {
-    .sprite__svg {
-      display: none; }
-      .sprite__svg--md {
-        display: block; } }
-  @media screen and (max-width: 767px) {
-    .sprite__svg {
-      display: none; }
-      .sprite__svg--sm {
-        display: block; } }
-
-.sprite img {
-  position: absolute; }
+.sprite {
+  position: relative; }
+  .sprite__svg {
+    display: none; }
+    .sprite__svg--lg {
+      display: block; }
+    @media screen and (max-width: 1365px) {
+      .sprite__svg {
+        display: none; }
+        .sprite__svg--md {
+          display: block; } }
+    @media screen and (max-width: 767px) {
+      .sprite__svg {
+        display: none; }
+        .sprite__svg--sm {
+          display: block; } }
+  .sprite img {
+    position: absolute;
+    top: 0; }
 
 .container {
   height: 100%;
