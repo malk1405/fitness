@@ -2101,6 +2101,10 @@ picture img {
       .timetable__header {
         margin-bottom: 40px; } }
   .timetable__table {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     border-collapse: collapse;
     font-size: 18px;
     text-align: center; }

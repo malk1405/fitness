@@ -50,6 +50,8 @@
   }
 
   &__table {
+    user-select: none;
+
     &-container {
       overflow: hidden;
       position: relative;
