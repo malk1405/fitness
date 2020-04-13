@@ -1196,6 +1196,7 @@ picture img {
         font-size: 80px; } }
 
 .plan__price-value {
+  color: #103aae;
   font-weight: bold; }
 
 .plan__buy {
